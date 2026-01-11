@@ -1,0 +1,93 @@
+<!-- Font Awesome -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
+
+<header class="tv-navbar" id="tvNavbar">
+  <div class="tv-nav-container">
+
+    <!-- Logo -->
+    <a href="/" class="tv-logo">
+        <img 
+          src="{{ url_for('static', filename='media/logo.png') }}" 
+          alt="Techya Verse Logo"
+          class="tv-logo-img"
+        />
+      </a>
+      
+
+    <!-- Center Navigation -->
+    <nav class="tv-nav-links">
+
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+
+      <!-- Services Dropdown -->
+      <div class="tv-dropdown">
+        <a href="/services" class="tv-dropdown-toggle">
+          Services <i class="fas fa-chevron-down"></i>
+        </a>
+
+        <div class="tv-dropdown-menu">
+          <a href="/services/ai-ml">AI & Machine Learning</a>
+          <a href="/services/generative-ai">Generative AI</a>
+          <a href="/services/neural-networks">Neural Networks</a>
+          <a href="/services/data-science">Data Science</a>
+          <a href="/services/web-dev">Web Development</a>
+          <a href="/services/cloud-devops">Cloud & DevOps</a>
+          <a href="/services/blockchain">Blockchain</a>
+        </div>
+      </div>
+
+      <a href="/portfolio">Portfolio</a>
+      <a href="/blog">Blog</a>
+
+    </nav>
+
+    <!-- Right CTA + Hamburger -->
+    <div class="tv-nav-actions">
+      <a href="/contact" class="tv-btn">Contact Us</a>
+      <button class="tv-hamburger" id="tvHamburger">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+
+  </div>
+</header>
+
+<!-- Mobile Drawer -->
+<div class="tv-drawer" id="tvDrawer">
+
+  <div class="tv-drawer-header">
+    <span>Menu</span>
+    <button id="tvCloseDrawer">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+
+  <div class="tv-drawer-links">
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+
+    <!-- Services Accordion -->
+    <button class="tv-accordion">
+      Services <i class="fas fa-chevron-down"></i>
+    </button>
+
+    <div class="tv-accordion-panel">
+      <a href="/services/ai-ml">AI & Machine Learning</a>
+      <a href="/services/generative-ai">Generative AI</a>
+      <a href="/services/neural-networks">Neural Networks</a>
+      <a href="/services/data-science">Data Science</a>
+      <a href="/services/web-dev">Web Development</a>
+      <a href="/services/cloud-devops">Cloud & DevOps</a>
+      <a href="/services/blockchain">Blockchain</a>
+    </div>
+
+    <a href="/portfolio">Portfolio</a>
+    <a href="/blog">Blog</a>
+
+    <a href="/contact" class="tv-btn mobile">Contact Us</a>
+  </div>
+</div>

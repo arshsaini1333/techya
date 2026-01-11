@@ -1,0 +1,157 @@
+{% extends "base.html" %}
+
+{% block title %}Advanced Web Development - TechYa Verse{% endblock %}
+
+{% block extra_css %}
+<style>
+    .service-page {
+        padding-top: 120px;
+        background: var(--primary);
+    }
+
+    .service-hero {
+        background: var(--gradient);
+        padding: 80px 0;
+        text-align: center;
+    }
+
+    .service-hero h1 {
+        font-size: 3.5rem;
+        margin-bottom: 20px;
+        color: rgb(255, 67, 5);
+        
+        
+    }
+
+    .service-content {
+        padding: 80px 0;
+    }
+
+    .service-section {
+        margin-bottom: 60px;
+    }
+
+    .service-section h2 {
+        color: rgb(255, 67, 5);
+        margin-bottom: 30px;
+        font-size: 2.5rem;
+    }
+
+    .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+    }
+
+    .feature-card {
+        background: rgba(18, 18, 40, 0.7);
+        padding: 30px;
+        border-radius: 15px;
+        border: 1px solid rgba(255, 67, 5, 0.2);
+        transition: var(--transition);
+    }
+
+    .feature-card:hover {
+        transform: translateY(-5px);
+        border-color: rgba(255, 67, 5, 0.3);
+        box-shadow: 0 10px 30px rgba(255, 67, 5, 0.1);
+    }
+
+    .feature-icon {
+        font-size: 40px;
+        color: rgb(255, 67, 5);
+        margin-bottom: 20px;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="service-page">
+    <section class="service-hero">
+        <div class="container">
+            <div class="service-icon" style="font-size: 100px; color: rgb(255, 67, 5); margin-bottom: 30px;">
+                <i class="fas fa-code"></i>
+            </div>
+            <h1>Advanced Web Development</h1>
+            <p style="font-size: 1.3rem; max-width: 800px; margin: 0 auto;">Create immersive, high-performance web applications using modern frameworks and cutting-edge technologies.</p>
+        </div>
+    </section>
+
+    <section class="service-content">
+        <div class="container">
+            <div class="service-section">
+                <h2>Overview</h2>
+                <p>We build modern, scalable web applications that deliver exceptional user experiences. Our expertise spans progressive web apps, real-time data streaming, interactive 3D experiences, and enterprise-grade web solutions that perform flawlessly across all devices and platforms.</p>
+            </div>
+
+            <div class="service-section">
+                <h2>Key Features</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h3>Progressive Web Apps</h3>
+                        <p>Build app-like experiences that work offline and provide native app functionality in the browser.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-broadcast-tower"></i></div>
+                        <h3>Real-time Data Streaming</h3>
+                        <p>Implement live data updates and real-time communication features for dynamic user experiences.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-cube"></i></div>
+                        <h3>Interactive 3D Experiences</h3>
+                        <p>Create immersive 3D visualizations and interactive experiences using WebGL and modern 3D libraries.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-rocket"></i></div>
+                        <h3>High Performance</h3>
+                        <p>Optimize applications for speed, scalability, and efficiency with modern performance techniques.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                        <h3>Security First</h3>
+                        <p>Implement robust security measures to protect user data and prevent vulnerabilities.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-sync"></i></div>
+                        <h3>Responsive Design</h3>
+                        <p>Ensure seamless experiences across all devices with responsive and adaptive design principles.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-section">
+                <h2>Technologies We Use</h2>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="padding: 15px; margin-bottom: 10px; background: rgba(255, 255, 255, 0.9); border-radius: 10px; border-left: 4px solid rgb(255, 67, 5);">
+                        <i class="fas fa-check-circle" style="color: rgb(255, 67, 5); margin-right: 10px;"></i>
+                        React, Vue.js, Angular for frontend development
+                    </li>
+                    <li style="padding: 15px; margin-bottom: 10px; background: rgba(255, 255, 255, 0.9); border-radius: 10px; border-left: 4px solid rgb(255, 67, 5);">
+                        <i class="fas fa-check-circle" style="color: rgb(255, 67, 5); margin-right: 10px;"></i>
+                        Node.js, Python, Django for backend services
+                    </li>
+                    <li style="padding: 15px; margin-bottom: 10px; background: rgba(255, 255, 255, 0.9); border-radius: 10px; border-left: 4px solid rgb(255, 67, 5);">
+                        <i class="fas fa-check-circle" style="color: rgb(255, 67, 5); margin-right: 10px;"></i>
+                        WebSocket, Server-Sent Events for real-time features
+                    </li>
+                    <li style="padding: 15px; margin-bottom: 10px; background: rgba(255, 255, 255, 0.9); border-radius: 10px; border-left: 4px solid rgb(255, 67, 5);">
+                        <i class="fas fa-check-circle" style="color: rgb(255, 67, 5); margin-right: 10px;"></i>
+                        Three.js, WebGL for 3D graphics and visualization
+                    </li>
+                    <li style="padding: 15px; margin-bottom: 10px; background: rgba(255, 255, 255, 0.9); border-radius: 10px; border-left: 4px solid rgb(255, 67, 5);">
+                        <i class="fas fa-check-circle" style="color: rgb(255, 67, 5); margin-right: 10px;"></i>
+                        Microservices architecture for scalable solutions
+                    </li>
+                </ul>
+            </div>
+
+            <div style="text-align: center; margin-top: 60px;">
+                <a href="{{ url_for('contact') }}" class="btn">Get Started</a>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}
+

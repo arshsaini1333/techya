@@ -1,0 +1,155 @@
+{% extends "base.html" %}
+
+{% block title %}AI & Machine Learning - TechYa Verse{% endblock %}
+
+{% block extra_css %}
+<style>
+    .service-page {
+        padding-top: 120px;
+        background: var(--primary);
+    }
+
+    .service-hero {
+        background: var(--gradient);
+        padding: 80px 0;
+        text-align: center;
+    }
+
+    .service-hero h1 {
+        font-size: 3.5rem;
+        margin-bottom: 20px;
+        color: rgb(255, 67, 5);
+    }
+
+    .service-content {
+        padding: 80px 0;
+    }
+
+    .service-section {
+        margin-bottom: 60px;
+    }
+
+    .service-section h2 {
+        color: rgb(255, 67, 5);
+        margin-bottom: 30px;
+        font-size: 2.5rem;
+    }
+
+    .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+    }
+
+    .feature-card {
+        background: rgba(255, 255, 255, 0.9);
+        padding: 30px;
+        border-radius: 15px;
+        border: 1px solid rgba(255, 67, 5, 0.2);
+        transition: var(--transition);
+    }
+
+    .feature-card:hover {
+        transform: translateY(-5px);
+        border-color: rgba(255, 67, 5, 0.3);
+        box-shadow: 0 10px 30px rgba(255, 67, 5, 0.1);
+    }
+
+    .feature-icon {
+        font-size: 40px;
+        color: rgb(255, 67, 5);
+        margin-bottom: 20px;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="service-page">
+    <section class="service-hero">
+        <div class="container">
+            <div class="service-icon" style="font-size: 100px; color: rgb(255, 67, 5); margin-bottom: 30px;">
+                <i class="fas fa-robot"></i>
+            </div>
+            <h1>AI & Machine Learning</h1>
+            <p style="font-size: 1.3rem; max-width: 800px; margin: 0 auto;">Develop intelligent systems that learn, adapt, and make data-driven decisions to transform your business operations.</p>
+        </div>
+    </section>
+
+    <section class="service-content">
+        <div class="container">
+            <div class="service-section">
+                <h2>Overview</h2>
+                <p>Our AI and Machine Learning solutions empower businesses to harness the power of artificial intelligence for predictive analytics, natural language processing, computer vision, and autonomous systems. We build intelligent systems that learn from data, adapt to new scenarios, and make data-driven decisions that drive business value.</p>
+            </div>
+
+            <div class="service-section">
+                <h2>Key Features</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+                        <h3>Predictive Analytics</h3>
+                        <p>Forecast trends, identify patterns, and make data-driven predictions that inform strategic business decisions.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-language"></i></div>
+                        <h3>Natural Language Processing</h3>
+                        <p>Build chatbots, sentiment analysis systems, and language understanding models that interact naturally with users.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-eye"></i></div>
+                        <h3>Computer Vision</h3>
+                        <p>Implement image recognition, object detection, and visual analysis systems for automated processing.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-cogs"></i></div>
+                        <h3>Autonomous Systems</h3>
+                        <p>Develop self-learning systems that adapt and optimize operations without constant human intervention.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-database"></i></div>
+                        <h3>Data Processing</h3>
+                        <p>Transform raw data into actionable insights with advanced machine learning algorithms and models.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-sync-alt"></i></div>
+                        <h3>Continuous Learning</h3>
+                        <p>Implement systems that improve over time through continuous learning and model refinement.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-section">
+                <h2>Applications</h2>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="padding: 15px; margin-bottom: 10px; background: rgba(255, 255, 255, 0.9); border-radius: 10px; border-left: 4px solid rgb(255, 67, 5);">
+                        <i class="fas fa-check-circle" style="color: rgb(255, 67, 5); margin-right: 10px;"></i>
+                        Customer behavior prediction and personalization
+                    </li>
+                    <li style="padding: 15px; margin-bottom: 10px; background: rgba(255, 255, 255, 0.9); border-radius: 10px; border-left: 4px solid rgb(255, 67, 5);">
+                        <i class="fas fa-check-circle" style="color: rgb(255, 67, 5); margin-right: 10px;"></i>
+                        Fraud detection and risk assessment
+                    </li>
+                    <li style="padding: 15px; margin-bottom: 10px; background: rgba(255, 255, 255, 0.9); border-radius: 10px; border-left: 4px solid rgb(255, 67, 5);">
+                        <i class="fas fa-check-circle" style="color: rgb(255, 67, 5); margin-right: 10px;"></i>
+                        Automated content moderation and filtering
+                    </li>
+                    <li style="padding: 15px; margin-bottom: 10px; background: rgba(255, 255, 255, 0.9); border-radius: 10px; border-left: 4px solid rgb(255, 67, 5);">
+                        <i class="fas fa-check-circle" style="color: rgb(255, 67, 5); margin-right: 10px;"></i>
+                        Supply chain optimization
+                    </li>
+                    <li style="padding: 15px; margin-bottom: 10px; background: rgba(255, 255, 255, 0.9); border-radius: 10px; border-left: 4px solid rgb(255, 67, 5);">
+                        <i class="fas fa-check-circle" style="color: rgb(255, 67, 5); margin-right: 10px;"></i>
+                        Medical diagnosis and treatment recommendations
+                    </li>
+                </ul>
+            </div>
+
+            <div style="text-align: center; margin-top: 60px;">
+                <a href="{{ url_for('contact') }}" class="btn">Get Started</a>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}
+

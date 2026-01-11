@@ -1,0 +1,219 @@
+/* ===============================
+   NAVBAR WRAPPER
+================================ */
+.tv-navbar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  
+    position: relative;
+    z-index: 1000;
+  
+    background: transparent;
+    transition: transform 0.35s ease, opacity 0.35s ease, background 0.3s ease;
+  }
+  
+  /* Hidden while scrolling down */
+  .tv-navbar.hidden {
+    transform: translateY(-120%);
+    opacity: 0;
+    pointer-events: none;
+  }
+  /* Floating when scrolling up */
+  .tv-navbar.floating {
+    position: fixed;
+    top: 16px;
+    left: 0;
+    right: 0;
+  }
+  
+  /* White background ONLY when floating */
+  .tv-navbar.white .tv-nav-container {
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(18px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+  }
+  
+  /* ===============================
+     NAVBAR CONTAINER (80%)
+  ================================ */
+  .tv-nav-container {
+    width: 80%;
+    max-width: 1200px;
+  
+    background: transparent;
+    border-radius: 16px;
+  
+    padding: 16px 24px;
+  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* ===============================
+     LOGO
+  ================================ */
+  .tv-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+  }
+  
+  .tv-logo-img {
+    height: 3rem;        /* ideal navbar height */
+    width: auto;
+    display: block;
+  }
+  
+  /* ===============================
+     CENTER NAV
+  ================================ */
+  .tv-nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .tv-nav-links a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    position: relative;
+  }
+  
+  .tv-nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background: rgb(255, 67, 5);
+    transition: width 0.3s ease;
+  }
+  
+  .tv-nav-links a:hover::after {
+    width: 100%;
+  }
+  
+  /* ===============================
+     DROPDOWN
+  ================================ */
+  .tv-dropdown {
+    position: relative;
+  }
+  
+  .tv-dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  .tv-dropdown-menu {
+    position: absolute;
+    top: 140%;
+    left: 50%;
+    transform: translateX(-50%);
+  
+    background: #fff;
+    border-radius: 14px;
+    min-width: 260px;
+    padding: 12px 0;
+  
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+  
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+  
+  .tv-dropdown-menu a {
+    display: block;
+    padding: 12px 22px;
+    font-size: 14px;
+    color: #000;
+    text-decoration: none;
+  }
+  
+  .tv-dropdown-menu a:hover {
+    background: rgba(255, 67, 5, 0.08);
+    color: rgb(255, 67, 5);
+  }
+  
+  .tv-dropdown:hover .tv-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    top: 180%;
+  }
+  
+  /* ===============================
+     ACTIONS
+  ================================ */
+  .tv-nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  
+  .tv-btn {
+    padding: 10px 22px;
+    border-radius: 999px;
+    background: rgb(255, 67, 5);
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  
+  /* ===============================
+     HAMBURGER
+  ================================ */
+  .tv-hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+  }
+  
+  /* ===============================
+     MOBILE DRAWER
+  ================================ */
+  .tv-drawer {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100%;
+  
+    background: #fff;
+    box-shadow: -20px 0 50px rgba(0, 0, 0, 0.15);
+    transition: right 0.4s ease;
+  
+    z-index: 2000;
+  }
+  
+  .tv-drawer.active {
+    right: 0;
+  }
+  
+  /* ===============================
+     RESPONSIVE
+  ================================ */
+  @media (max-width: 900px) {
+    .tv-nav-container {
+      width: 92%;
+    }
+  
+    .tv-nav-links {
+      display: none;
+    }
+  
+    .tv-hamburger {
+      display: block;
+    }
+  }
+  

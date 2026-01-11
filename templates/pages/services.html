@@ -1,0 +1,162 @@
+{% extends "base.html" %}
+
+{% block title %}Services - TechYa Verse{% endblock %}
+
+{% block extra_css %}
+<style>
+    .services {
+        background: var(--secondary);
+        position: relative;
+        overflow: hidden;
+        padding-top: 120px;
+    }
+
+    .services:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+    }
+
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 40px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .service-card {
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 20px;
+        padding: 50px 30px;
+        box-shadow: var(--shadow);
+        transition: var(--transition);
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        border: 1px solid rgba(255, 67, 5, 0.2);
+        backdrop-filter: blur(10px);
+    }
+
+    .service-card:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: rgba(255, 67, 5, 0.1);
+        transition: var(--transition);
+        z-index: -1;
+        opacity: 0.1;
+    }
+
+    .service-card:hover:before {
+        height: 100%;
+    }
+
+    .service-card:hover {
+        transform: translateY(-15px) scale(1.03);
+        box-shadow: 0 20px 40px rgba(255, 67, 5, 0.2);
+        border-color: rgba(255, 67, 5, 0.3);
+    }
+
+    .service-icon {
+        font-size: 70px;
+        margin-bottom: 30px;
+        color: rgb(255, 67, 5);
+        transition: var(--transition);
+        display: inline-block;
+        text-shadow: none;
+    }
+
+    .service-card:hover .service-icon {
+        color: rgb(255, 67, 5);
+        transform: scale(1.2) rotate(10deg);
+        text-shadow: none;
+    }
+
+    .service-card h3 {
+        margin-bottom: 20px;
+        transition: color 0.3s ease;
+        font-size: 1.8rem;
+        color: rgb(255, 67, 5);
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<section class="services">
+    <div class="container">
+        <div class="section-title">
+            <h2>Our Advanced Services</h2>
+            <p>Three decades of expertise distilled into cutting-edge solutions that leverage the latest technologies to solve complex business challenges.</p>
+        </div>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <h3>AI & Machine Learning</h3>
+                <p>Develop intelligent systems that learn, adapt, and make data-driven decisions. Our AI solutions include predictive analytics, natural language processing, computer vision, and autonomous systems.</p>
+                <a href="{{ url_for('service_ai_ml') }}" class="btn" style="margin-top: 20px;">Learn More</a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3>Advanced Web Development</h3>
+                <p>Create immersive, high-performance web applications using modern frameworks, progressive web apps, real-time data streaming, and interactive 3D experiences.</p>
+                <a href="{{ url_for('service_web_dev') }}" class="btn" style="margin-top: 20px;">Learn More</a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h3>Neural Networks & Deep Learning</h3>
+                <p>Design and implement sophisticated neural architectures for complex pattern recognition, generative models, and advanced predictive systems.</p>
+                <a href="{{ url_for('service_neural_networks') }}" class="btn" style="margin-top: 20px;">Learn More</a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-link"></i>
+                </div>
+                <h3>Blockchain & Web3 Solutions</h3>
+                <p>Build decentralized applications, smart contracts, and token economies that revolutionize trust, transparency, and digital ownership.</p>
+                <a href="{{ url_for('service_blockchain') }}" class="btn" style="margin-top: 20px;">Learn More</a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-chart-network"></i>
+                </div>
+                <h3>Data Science & Analytics</h3>
+                <p>Transform raw data into actionable insights with advanced statistical modeling, data visualization, and business intelligence solutions.</p>
+                <a href="{{ url_for('service_data_science') }}" class="btn" style="margin-top: 20px;">Learn More</a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-cloud"></i>
+                </div>
+                <h3>Cloud & DevOps</h3>
+                <p>Implement scalable cloud infrastructure, microservices architecture, and automated deployment pipelines for robust and efficient systems.</p>
+                <a href="{{ url_for('service_cloud_devops') }}" class="btn" style="margin-top: 20px;">Learn More</a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-magic"></i>
+                </div>
+                <h3>Generative AI & Agent Systems</h3>
+                <p>Advanced AI agents and generative models for autonomous decision-making, content generation, and intelligent automation systems.</p>
+                <a href="{{ url_for('service_generative_ai') }}" class="btn" style="margin-top: 20px;">Learn More</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+

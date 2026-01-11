@@ -1,0 +1,914 @@
+{% extends "base/base.html" %}
+
+{% block title %}Home - TechYa Verse | Advanced AI/ML, Web Development & Blockchain Solutions{% endblock %}
+
+{% block extra_css %}
+
+{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+
+<section class="hero hero-top" id="home">
+    <div id="three-canvas"></div>
+    <canvas class="neural-network" id="neural-network"></canvas>
+  
+    <div class="hero-container">
+      <div class="hero-wrapper">
+  
+        <!-- LEFT CONTENT -->
+        <div class="hero-content-left">
+            <h1 class="hero-heading">
+              Building <span class="highlight">Reliable AI Systems</span><br />
+              for Modern Businesses
+            </h1>
+          
+             <!-- Supporting Line -->
+             <p class="hero-supporting">
+                We design and build Intelligent, Production Ready AI Systems along with End to End Full Stack Web Applications  to solve real business problems.
+              </p>
+            <!-- Animated Subheadings -->
+            <div class="hero-rotator">
+              <span class="rotator-item active">
+                Production-Ready AI Solutions, Not Experiments
+              </span>
+              <span class="rotator-item">
+                Intelligent Automation Designed for Business Growth
+              </span>
+              <span class="rotator-item">
+                Blockchain & Trading Bots With Practical Use Cases
+              </span>
+              <span class="rotator-item">
+                End-to-End Full-Stack Development
+              </span>
+            </div>
+          
+           
+          
+            <!-- CTA Buttons -->
+            <div class="hero-cta">
+              <a href="#" class="btn-primary">Build With Techya Verse</a>
+              <a href="#" class="btn-secondary">Explore Our Services</a>
+            </div>
+          </div>
+          
+  
+        <!-- RIGHT VIDEO -->
+        
+        <div class="hero-video-container">
+            <div class="video-rings"></div>
+          
+            <video
+              id="heroVideo"
+              class="hero-video"
+              playsinline
+              preload="metadata"
+            >
+              <source
+                src="{{ url_for('static', filename='media/ai_agent_circle.mp4') }}"
+                type="video/mp4"
+              />
+            </video>
+          
+            <button class="video-control-pill" id="videoControl" type="button">
+              <span class="icon">
+                <i class="fas fa-play"></i>
+              </span>
+              <span class="label">Play video</span>
+            </button>
+          </div>
+
+    </div>
+  </section>
+   
+  <!--Problems we Solved for Other's Section -->
+  <section class="problems-section">
+    <div class="problems-container">
+  
+      <!-- LEFT STICKY CONTENT -->
+      <div class="problems-left">
+        <h2>Problems We’ve Solved for Others</h2>
+        <p>
+          At Techya Verse, we don’t build demos.
+          <br />
+          We solve real, high-impact business problems using AI,
+          automation, and intelligent systems.
+        </p>
+        <button class="problem-cta">Book A Call With Our Expert</button/>
+      </div>
+  
+      <!-- RIGHT SCROLLING CARDS -->
+      <div class="problems-right">
+
+        <div class="problem-card">
+            <div class="card-media">
+                <img src="/static/media/pwg1.png" alt="AI hiring automation" />
+              </div>
+          <h3>Hiring & HR</h3>
+          <p class="card-desc">
+            Techya Verse automated the entire hiring pipeline using AI resume parsing,
+            semantic candidate scoring, AI voice screening, and LLM-based technical
+            assessments to deliver fast, unbiased, and scalable hiring decisions.
+          </p>
+          <div class="card-footer">
+            <span>AI Screening</span>
+            <span>Voice Bots</span>
+            <span>LLM Assessments</span>
+          </div>
+        </div>
+      
+        <div class="problem-card">
+            <div class="card-media">
+                <img src="/static/media/pwg2.png" alt="AI hiring automation" />
+              </div>
+          <h3>Healthcare & Data Intelligence</h3>
+          <p class="card-desc">
+            We built advanced RAG systems enabling natural language access to millions
+            of healthcare records. ML pipelines analyze disease trends, symptoms, and
+            statistics to deliver instant, accurate medical insights.
+          </p>
+          <div class="card-footer">
+            <span>RAG Systems</span>
+            <span>Medical Analytics</span>
+            <span>Natural Language Query</span>
+          </div>
+        </div>
+      
+        <div class="problem-card">
+            <div class="card-media">
+                <img src="/static/media/pwg3.png" alt="AI hiring automation" />
+              </div>
+          <h3>E-Commerce & Retail</h3>
+          <p class="card-desc">
+            We developed computer-vision powered virtual try-on systems and AI shopping
+            assistants that recommend outfits dynamically based on body measurements
+            and user preferences, reducing returns and improving personalization.
+          </p>
+          <div class="card-footer">
+            <span>Virtual Try-On</span>
+            <span>Computer Vision</span>
+            <span>AI Recommendations</span>
+          </div>
+        </div>
+      
+        <div class="problem-card">
+            <div class="card-media">
+                <img src="/static/media/pwg5.png" alt="AI hiring automation" />
+              </div>
+          <h3>Defense, Surveillance & Drone Analytics</h3>
+          <p class="card-desc">
+            Our real-time drone intelligence systems use object detection and computer
+            vision to identify humans, anomalies, and GPS-linked locations, enabling
+            faster decision-making in rescue and surveillance operations.
+          </p>
+          <div class="card-footer">
+            <span>Drone Vision</span>
+            <span>Object Detection</span>
+            <span>Real-Time Intelligence</span>
+          </div>
+        </div>
+      
+        <div class="problem-card">
+            <div class="card-media">
+                <img src="/static/media/pwg4.png" alt="AI hiring automation" />
+              </div>
+          <h3>Customer Support</h3>
+          <p class="card-desc">
+            We created RAG-based voice and chat support bots trained on internal
+            knowledge bases. Using STT, TTS, and low-latency streaming, our systems
+            provide human-like support 24/7 at scale.
+          </p>
+          <div class="card-footer">
+            <span>Voice AI</span>
+            <span>RAG Bots</span>
+            <span>24/7 Support</span>
+          </div>
+        </div>
+      
+        <div class="problem-card">
+            <div class="card-media">
+                <img src="/static/media/pwg6.png" alt="AI hiring automation" />
+              </div>
+          <h3>System Automation & IT Support</h3>
+          <p class="card-desc">
+            We built an AI-driven automation layer with voice and chat control that
+            diagnoses issues, executes system commands, and applies fixes with user
+            approval for continuous monitoring and troubleshooting.
+          </p>
+          <div class="card-footer">
+            <span>Automation</span>
+            <span>Voice Control</span>
+            <span>IT Diagnostics</span>
+          </div>
+        </div>
+      
+        <div class="problem-card">
+            <div class="card-media">
+                <img src="/static/media/pwg7.png" alt="AI hiring automation" />
+              </div>
+          <h3>Generative AI Adoption</h3>
+          <p class="card-desc">
+            We created a no-code Generative AI platform allowing enterprises to deploy
+            chatbots, voice assistants, AI agents, and automations in minutes while
+            handling scalability, infrastructure, and security.
+          </p>
+          <div class="card-footer">
+            <span>No-Code AI</span>
+            <span>AI Agents</span>
+            <span>Enterprise Scale</span>
+          </div>
+        </div>
+      
+        <div class="problem-card">
+            <div class="card-media">
+                <img src="/static/media/pwg8.png" alt="AI hiring automation" />
+              </div>
+          <h3>Trading & Finance</h3>
+          <p class="card-desc">
+            We engineered automated trading systems using LSTM models, reinforcement
+            learning, and multi-factor validation to execute real-time trades and
+            eliminate emotional decision-making.
+          </p>
+          <div class="card-footer">
+            <span>Algo Trading</span>
+            <span>Reinforcement Learning</span>
+            <span>Real-Time Signals</span>
+          </div>
+        </div>
+      
+        <div class="problem-card">
+            <div class="card-media">
+                <img src="/static/media/pwg9.png" alt="AI hiring automation" />
+              </div>
+          <h3>Blockchain & Web3</h3>
+          <p class="card-desc">
+            We simplified Web3 adoption by building intuitive wallets, NFT platforms,
+            and DeFi applications that abstract complex blockchain interactions into
+            clean, user-friendly interfaces.
+          </p>
+          <div class="card-footer">
+            <span>Web3 UX</span>
+            <span>DeFi</span>
+            <span>Smart Contracts</span>
+          </div>
+        </div>
+
+        <div class="problem-card">
+            <div class="card-media">
+                <img src="/static/media/pwg9.png" alt="AI hiring automation" />
+              </div>
+          <h3>Automation & Growth Intelligence</h3>
+          <p class="card-desc">
+            We designed end-to-end lead generation workflows using n8n, automating data capture, enrichment, scoring, and CRM sync. Intelligent automation enables consistent, scalable, and high-quality lead flow with minimal manual effort.
+          </p>
+          <div class="card-footer">
+            <span>Lead Generation Automation</span>
+            <span>Workflow Orchestration (n8n)</span>
+            <span>CRM & Outreach Integration</span>
+          </div>
+        </div>
+      
+      </div>
+      
+    </div>
+
+  </section>
+
+
+  <!--How WE Can HELP SECTION-->
+  <!-- Techya Verse Help Section -->
+
+  <section class="techya-help">
+    <div class="container">
+      <h2 class="section-title">How TechYa Verse Can Help You</h2>
+      <p class="section-subtitle">
+        We partner with startups and enterprises to design, build, and deploy intelligent systems that scale.
+        From early ideas to production-ready AI, we focus on systems that are fast, secure, and built for real-world use.
+      </p>
+  
+      <div class="card-grid">
+        <div class="help-card">
+          <span class="material-symbols-outlined help-icon">rocket_launch</span>
+          <h3>From Idea to Production</h3>
+          <p>Take ideas, prototypes, or existing systems all the way to secure, scalable production.</p>
+        </div>
+  
+        <div class="help-card">
+          <span class="material-symbols-outlined help-icon">psychology</span>
+          <h3>Applied AI Systems</h3>
+          <p>AI agents, computer vision, and LLMs trained on your data to take real actions.</p>
+        </div>
+  
+        <div class="help-card">
+          <span class="material-symbols-outlined help-icon">bolt</span>
+          <h3>Built for Speed & Scale</h3>
+          <p>Rapid prototyping with production-grade architectures and low-latency systems.</p>
+        </div>
+  
+        <div class="help-card">
+          <span class="material-symbols-outlined help-icon">security</span>
+          <h3>Enterprise-Ready by Default</h3>
+          <p>Secure deployments, scalable microservices, monitoring, and compliance built in.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!--Why Techya Verse-->
+
+  <section class="why-techyaverse" id="why-techyaverse">
+    <div class="containerWhy">
+  
+      <p class="section-tag">Why Choosing TechYa Verse</p>  
+      <p class="section-description">
+        Techya Verse designs and builds production-ready AI systems, intelligent automation,
+        and end-to-end full stack platforms. From scalable web applications to custom AI-driven
+        workflows, we help businesses solve real problems, optimize operations, and grow faster
+        with reliable engineering.
+      </p>
+  
+      <div class="stats-grid">
+        <div class="stat-box">
+          <h3 class="counter" data-target="40">0</h3>
+          <p>AI & Automation Systems Built</p>
+        </div>
+  
+        <div class="stat-box">
+          <h3 class="counter" data-target="45">0</h3>
+          <p>Production-Ready Web Platforms</p>
+        </div>
+  
+        <div class="stat-box">
+          <h3 class="counter" data-target="30">0</h3>
+          <p>Businesses Scaled with Tech</p>
+        </div>
+  
+        <div class="stat-box">
+          <h3 class="counter" data-target="5">0</h3>
+          <p>Years of Engineering Experience</p>
+        </div>
+      </div>
+  
+    </div>
+  </section>
+
+
+  <!-- Services We Provided-->
+  <section class="services-section">
+    <div class="services-header">
+      <div>
+        <span class="services-tag">Services We're Offering</span>
+      <p class="services-description">
+        We design and build production-ready AI systems, automation pipelines, and full-stack platforms.
+  Our services focus on solving real business problems with scalable, secure, and reliable engineering.
+      </p>
+      </div>
+  
+      <div class="carousel-controls">
+        <button class="arrow left" id="prevBtn">&#10094;</button>
+        <button class="arrow right" id="nextBtn">&#10095;</button>
+      </div>
+    </div>
+  
+    <div class="carousel-wrapper">
+      <div class="carousel-track" id="carouselTrack">
+
+        <!-- Web Development -->
+        <div class="service-card">
+          <div class="card-image">
+            <img src="/static/media/web.jpg" alt="Web Development">
+            <div class="card-icon">
+              <span class="material-symbols-outlined">code</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3>Web Development</h3>
+            <p>Scalable, secure, and performance-focused web platforms built end to end.</p>
+            <a href="#">Read More →</a>
+          </div>
+        </div>
+      
+        <!-- Generative AI -->
+        <div class="service-card">
+          <div class="card-image">
+            <img src="/static/media/genai.jpg" alt="Generative AI">
+            <div class="card-icon">
+              <span class="material-symbols-outlined">auto_awesome</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3>Generative AI</h3>
+            <p>LLM-powered systems for content generation, chatbots, and automation.</p>
+            <a href="#">Read More →</a>
+          </div>
+        </div>
+      
+        <!-- Agentic AI -->
+        <div class="service-card">
+          <div class="card-image">
+            <img src="/static/media/agentic.webp" alt="Agentic AI">
+            <div class="card-icon">
+              <span class="material-symbols-outlined">psychology</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3>Agentic AI</h3>
+            <p>Autonomous AI agents that reason, plan, and act across workflows.</p>
+            <a href="#">Read More →</a>
+          </div>
+        </div>
+      
+        <!-- AI Workflow -->
+        <div class="service-card">
+          <div class="card-image">
+            <img src="/static/media/workflow.png" alt="AI Workflow">
+            <div class="card-icon">
+              <span class="material-symbols-outlined">account_tree</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3>AI Workflow</h3>
+            <p>Custom AI pipelines integrated with business processes.</p>
+            <a href="#">Read More →</a>
+          </div>
+        </div>
+      
+        <!-- Algo Trading -->
+        <div class="service-card">
+          <div class="card-image">
+            <img src="/static/media/algo.jpg" alt="Algo Trading">
+            <div class="card-icon">
+              <span class="material-symbols-outlined">trending_up</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3>Algo Trading</h3>
+            <p>Data-driven trading strategies with automation and risk control.</p>
+            <a href="#">Read More →</a>
+          </div>
+        </div>
+      
+        <!-- Machine Learning -->
+        <div class="service-card">
+          <div class="card-image">
+            <img src="/static/media/ml.jpg" alt="Machine Learning">
+            <div class="card-icon">
+              <span class="material-symbols-outlined">memory</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3>Machine Learning</h3>
+            <p>Predictive models trained for real-world performance.</p>
+            <a href="#">Read More →</a>
+          </div>
+        </div>
+      
+        <!-- Blockchain -->
+        <div class="service-card">
+          <div class="card-image">
+            <img src="/static/media/blockchain.jpg" alt="Blockchain">
+            <div class="card-icon">
+              <span class="material-symbols-outlined">hub</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3>Blockchain</h3>
+            <p>Decentralized applications and smart contract development.</p>
+            <a href="#">Read More →</a>
+          </div>
+        </div>
+      
+        <!-- Web Scraping -->
+        <div class="service-card">
+          <div class="card-image">
+            <img src="/static/media/webs.png" alt="Web Scraping">
+            <div class="card-icon">
+              <span class="material-symbols-outlined">storage</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3>Web Scraping</h3>
+            <p>High-accuracy data extraction at scale.</p>
+            <a href="#">Read More →</a>
+          </div>
+        </div>
+      
+        <!-- Computer Vision -->
+        <div class="service-card">
+          <div class="card-image">
+            <img src="/static/media/computervision.jpg" alt="Computer Vision">
+            <div class="card-icon">
+              <span class="material-symbols-outlined">visibility</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3>Computer Vision</h3>
+            <p>Image and video intelligence for detection, tracking, and analysis.</p>
+            <a href="#">Read More →</a>
+          </div>
+        </div>
+      
+      </div>
+      
+      
+    </div>
+  </section>
+
+  <!--Testimonials -->
+  <section class="tv-testimonials-scroll">
+    <div class="tv-container">
+  
+      <!-- LEFT STATIC CONTENT -->
+      <div class="tv-left">
+        <h2>What Our Clients Say About TechYa Verse</h2>
+        <p class="tv-subtitle">
+          Trusted by founders, product teams, and enterprises building real-world AI systems.  Honest feedback from teams who’ve scaled production systems with us.
+        </p>   
+        <a href="#" class="tv-btn">Talk to Our Team</a>
+      </div>
+  
+      <!-- RIGHT SCROLLING TESTIMONIALS -->
+      <div class="tv-right">
+
+        <!-- COLUMN 1 – SCROLL UP -->
+        <div class="tv-column scroll-up">
+      
+          <!-- ORIGINAL -->
+          <div class="tv-card">
+            <div class="tv-stars">★★★★★</div>
+            <p>Techya Verse helped us take an AI idea and turn it into a reliable production system.</p>
+            <h4>Aman Verma</h4>
+            <span>Founder, SaaS Startup</span>
+          </div>
+      
+          <div class="tv-card">
+            <div class="tv-stars">★★★★★</div>
+            <p>The automation workflows reduced manual work across multiple teams.</p>
+            <h4>Ritika Sharma</h4>
+            <span>Operations Lead</span>
+          </div>
+      
+          <div class="tv-card">
+            <div class="tv-stars">★★★★★</div>
+            <p>They understand production constraints, not just AI theory.</p>
+            <h4>Rohit Malhotra</h4>
+            <span>CTO, FinTech Company</span>
+          </div>
+      
+          <div class="tv-card">
+            <div class="tv-stars">★★★★★</div>
+            <p>Clear communication and delivery exactly as promised.</p>
+            <h4>Neha Kapoor</h4>
+            <span>Product Manager</span>
+          </div>
+      
+          <div class="tv-card">
+            <div class="tv-stars">★★★★★</div>
+            <p>Our ML pipelines are now stable, monitored, and easy to extend.</p>
+            <h4>Kunal Mehta</h4>
+            <span>Data Science Manager</span>
+          </div>
+      
+          <!-- DUPLICATE (FOR INFINITE LOOP) -->
+          <div class="tv-card">
+            <div class="tv-stars">★★★★★</div>
+            <p>Techya Verse helped us take an AI idea and turn it into a reliable production system.</p>
+            <h4>Aman Verma</h4>
+            <span>Founder, SaaS Startup</span>
+          </div>
+      
+          <div class="tv-card">
+            <div class="tv-stars">★★★★★</div>
+            <p>The automation workflows reduced manual work across multiple teams.</p>
+            <h4>Ritika Sharma</h4>
+            <span>Operations Lead</span>
+          </div>
+      
+          <div class="tv-card">
+            <div class="tv-stars">★★★★★</div>
+            <p>They understand production constraints, not just AI theory.</p>
+            <h4>Rohit Malhotra</h4>
+            <span>CTO, FinTech Company</span>
+          </div>
+      
+          <div class="tv-card">
+            <div class="tv-stars">★★★★★</div>
+            <p>Clear communication and delivery exactly as promised.</p>
+            <h4>Neha Kapoor</h4>
+            <span>Product Manager</span>
+          </div>
+      
+          <div class="tv-card">
+            <div class="tv-stars">★★★★★</div>
+            <p>Our ML pipelines are now stable, monitored, and easy to extend.</p>
+            <h4>Kunal Mehta</h4>
+            <span>Data Science Manager</span>
+          </div>
+      
+        </div>
+      
+        <!-- COLUMN 2 – SCROLL DOWN -->
+        <div class="tv-column scroll-down">
+      
+          <!-- ORIGINAL -->
+          <div class="tv-card">
+            <div class="tv-stars">★★★★★</div>
+            <p>The AI agents actually perform actions instead of just responding.</p>
+            <h4>Arjun Singh</h4>
+            <span>Growth Head</span>
+          </div>
+      
+          <div class="tv-card">
+            <div class="tv-stars">★★★★★</div>
+            <p>One of the few teams that truly delivers production-ready systems.</p>
+            <h4>Pooja Iyer</h4>
+            <span>Engineering Lead</span>
+          </div>
+      
+          <div class="tv-card">
+            <div class="tv-stars">★★★★★</div>
+            <p>Their computer vision system works flawlessly in real-time.</p>
+            <h4>Sameer Khan</h4>
+            <span>AI Consultant</span>
+          </div>
+      
+          <div class="tv-card">
+            <div class="tv-stars">★★★★★</div>
+            <p>They treated our product like their own.</p>
+            <h4>Ankit Bansal</h4>
+            <span>Co-Founder</span>
+          </div>
+      
+          <div class="tv-card">
+            <div class="tv-stars">★★★★★</div>
+            <p>Fast execution without compromising on quality.</p>
+            <h4>Shreya Patel</h4>
+            <span>Business Owner</span>
+          </div>
+      
+          <!-- DUPLICATE -->
+          <div class="tv-card">
+            <div class="tv-stars">★★★★★</div>
+            <p>The AI agents actually perform actions instead of just responding.</p>
+            <h4>Arjun Singh</h4>
+            <span>Growth Head</span>
+          </div>
+      
+          <div class="tv-card">
+            <div class="tv-stars">★★★★★</div>
+            <p>One of the few teams that truly delivers production-ready systems.</p>
+            <h4>Pooja Iyer</h4>
+            <span>Engineering Lead</span>
+          </div>
+      
+          <div class="tv-card">
+            <div class="tv-stars">★★★★★</div>
+            <p>Their computer vision system works flawlessly in real-time.</p>
+            <h4>Sameer Khan</h4>
+            <span>AI Consultant</span>
+          </div>
+      
+          <div class="tv-card">
+            <div class="tv-stars">★★★★★</div>
+            <p>They treated our product like their own.</p>
+            <h4>Ankit Bansal</h4>
+            <span>Co-Founder</span>
+          </div>
+      
+          <div class="tv-card">
+            <div class="tv-stars">★★★★★</div>
+            <p>Fast execution without compromising on quality.</p>
+            <h4>Shreya Patel</h4>
+            <span>Business Owner</span>
+          </div>
+      
+        </div>
+      
+      </div>      
+    </div>
+  </section>
+  
+
+
+  <!--FAQ's-->
+  <section class="tv-faq">
+    <div class="tv-faq-container">
+  
+      <div class="tv-faq-header">
+        <h2>Frequently Asked Questions</h2>
+        <p>
+          Common questions about how Techya Verse works, what we build,
+          and how we help teams ship production-ready systems.
+        </p>
+      </div>
+  
+      <div class="tv-faq-list">
+  
+        <div class="tv-faq-item">
+          <button class="tv-faq-question">
+            What kind of companies does Techya Verse work with?
+            <span class="tv-faq-icon">+</span>
+          </button>
+          <div class="tv-faq-answer">
+            <p>
+              We work with startups, scale-ups, and enterprises that want to build
+              reliable AI systems, automation workflows, and scalable web platforms.
+              Our focus is always on real-world, production-ready solutions.
+            </p>
+          </div>
+        </div>
+  
+        <div class="tv-faq-item">
+          <button class="tv-faq-question">
+            Do you build custom AI solutions or use pre-built tools?
+            <span class="tv-faq-icon">+</span>
+          </button>
+          <div class="tv-faq-answer">
+            <p>
+              We primarily build custom solutions tailored to your data, workflows,
+              and infrastructure. Where it makes sense, we integrate best-in-class
+              tools, but we never force generic solutions onto complex problems.
+            </p>
+          </div>
+        </div>
+  
+        <div class="tv-faq-item">
+          <button class="tv-faq-question">
+            How is your approach different from typical AI agencies?
+            <span class="tv-faq-icon">+</span>
+          </button>
+          <div class="tv-faq-answer">
+            <p>
+              We focus on production systems, not demos. That means monitoring,
+              scalability, security, and maintainability are considered from day one,
+              not added as an afterthought.
+            </p>
+          </div>
+        </div>
+  
+        <div class="tv-faq-item">
+          <button class="tv-faq-question">
+            Can you integrate AI into our existing product or platform?
+            <span class="tv-faq-icon">+</span>
+          </button>
+          <div class="tv-faq-answer">
+            <p>
+              Yes. We frequently integrate AI, automation, and data pipelines into
+              existing products without disrupting current users or workflows.
+              This includes APIs, dashboards, and internal tools.
+            </p>
+          </div>
+        </div>
+  
+        <div class="tv-faq-item">
+          <button class="tv-faq-question">
+            How long does it take to deliver a typical project?
+            <span class="tv-faq-icon">+</span>
+          </button>
+          <div class="tv-faq-answer">
+            <p>
+              Timelines depend on scope, but most projects move from planning to
+              production in weeks, not months. We work in clear phases so you
+              always know what’s being built and when.
+            </p>
+          </div>
+        </div>
+  
+        <div class="tv-faq-item">
+          <button class="tv-faq-question">
+            Do you offer support after deployment?
+            <span class="tv-faq-icon">+</span>
+          </button>
+          <div class="tv-faq-answer">
+            <p>
+              Yes. We offer post-deployment support, monitoring, optimization,
+              and long-term collaboration to ensure systems remain reliable
+              as your business grows.
+            </p>
+          </div>
+        </div>
+  
+      </div>
+  
+    </div>
+  </section>
+  
+  
+
+  <!--Chatbot-->
+<div class="chatbot-container">
+    <button class="chatbot-button" id="chatbotToggle">
+        <i class="fas fa-comments"></i>
+    </button>
+    <div class="chatbot-window" id="chatbotWindow">
+        <div class="chatbot-header">
+            <h3>TechYa Verse Assistant</h3>
+            <button class="chatbot-close" id="chatbotClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="chatbot-messages" id="chatbotMessages">
+            <div class="chatbot-message bot">
+                Hello! I'm your TechYa Verse assistant. How can I help you today?
+            </div>
+        </div>
+        <div class="chatbot-loading" id="chatbotLoading">
+            <span></span><span></span><span></span>
+        </div>
+        <div class="chatbot-input-container">
+            <input type="text" class="chatbot-input" id="chatbotInput" placeholder="Type your message...">
+            <button class="chatbot-send" id="chatbotSend">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    lucide.createIcons();
+  });
+
+    // Initialize GSAP
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Chatbot functionality
+    const chatbotToggle = document.getElementById('chatbotToggle');
+    const chatbotWindow = document.getElementById('chatbotWindow');
+    const chatbotClose = document.getElementById('chatbotClose');
+    const chatbotInput = document.getElementById('chatbotInput');
+    const chatbotSend = document.getElementById('chatbotSend');
+    const chatbotMessages = document.getElementById('chatbotMessages');
+    const chatbotLoading = document.getElementById('chatbotLoading');
+
+    chatbotToggle.addEventListener('click', () => {
+        chatbotWindow.classList.toggle('active');
+    });
+
+    chatbotClose.addEventListener('click', () => {
+        chatbotWindow.classList.remove('active');
+    });
+
+    function addMessage(text, isUser) {
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `chatbot-message ${isUser ? 'user' : 'bot'}`;
+        messageDiv.textContent = text;
+        chatbotMessages.appendChild(messageDiv);
+        chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+    }
+
+    function showLoading() {
+        chatbotLoading.classList.add('active');
+    }
+
+    function hideLoading() {
+        chatbotLoading.classList.remove('active');
+    }
+
+    async function sendMessage() {
+        const message = chatbotInput.value.trim();
+        if (!message) return;
+
+        addMessage(message, true);
+        chatbotInput.value = '';
+        showLoading();
+
+        try {
+            const response = await fetch('/chat', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ message: message })
+            });
+
+            const data = await response.json();
+            hideLoading();
+
+            if (data.response) {
+                addMessage(data.response, false);
+            } else {
+                addMessage('Sorry, I encountered an error. Please try again.', false);
+            }
+        } catch (error) {
+            hideLoading();
+            addMessage('Sorry, I encountered an error. Please try again.', false);
+        }
+    }
+
+    chatbotSend.addEventListener('click', sendMessage);
+    chatbotInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            sendMessage();
+        }
+    });
+
+</script>
+{% endblock %}
+
