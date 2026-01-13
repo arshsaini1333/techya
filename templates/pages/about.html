@@ -1,140 +1,106 @@
-{% extends "base.html" %}
+{% extends "base/base.html" %}
 
 {% block title %}About Us - TechYa Verse{% endblock %}
 
-{% block extra_css %}
-<style>
-    .about {
-        background: var(--primary);
-        position: relative;
-        overflow: hidden;
-        padding-top: 120px;
-    }
 
-    .about-content {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 80px;
-        align-items: center;
-    }
-
-    .about-text h2 {
-        margin-bottom: 30px;
-    }
-
-    .about-image {
-        border-radius: 20px;
-        overflow: hidden;
-        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
-        position: relative;
-        transform: perspective(1000px) rotateY(-5deg);
-        transition: var(--transition);
-        border: 1px solid rgba(255, 67, 5, 0.2);
-    }
-
-    .about-image:hover {
-        transform: perspective(1000px) rotateY(0deg);
-        box-shadow: 0 25px 60px rgba(255, 67, 5, 0.3);
-    }
-
-    .about-image img {
-        width: 100%;
-        height: auto;
-        display: block;
-        transition: transform 0.8s ease;
-    }
-
-    .about-image:hover img {
-        transform: scale(1.05);
-    }
-
-    .stats {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 50px;
-    }
-
-    .stat-item {
-        text-align: center;
-        position: relative;
-    }
-
-    .stat-number {
-        font-size: 3rem;
-        font-weight: 700;
-        color: rgb(255, 67, 5);
-        display: block;
-        text-shadow: none;
-        font-family: 'Orbitron', sans-serif;
-    }
-
-    .stat-text {
-        font-size: 1rem;
-        color: #666666;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-    }
-
-    @media (max-width: 1200px) {
-        .about-content {
-            grid-template-columns: 1fr;
-            gap: 60px;
-        }
-
-        .about-image {
-            order: -1;
-        }
-
-        .stats {
-            flex-wrap: wrap;
-            gap: 30px;
-        }
-
-        .stat-item {
-            flex: 1 1 45%;
-        }
-    }
-</style>
-{% endblock %}
 
 {% block content %}
-<section class="about">
-    <div class="container">
-        <div class="about-content">
-            <div class="about-text">
-                <div class="section-title" style="text-align: left;">
-                    <h2>Innovation Accelerated: Shaping the Future of Tech</h2>
-                </div>
-                <p>
-                    Techya Verse is a premium service provider built for the future. We combine a deep foundation in classic engineering principles with expertise in the latest transformative technologies, ensuring our solutions are both reliable and cutting-edge.
-                </p>
-                <p>
-                    Our core mission is to empower businesses with Intelligent Solutions for a Connected Future. We specialize in integrating advanced technologies from Generative AI and Agentic AI to high-frequency Algo Trading and Blockchain—to create scalable and secure digital ecosystems.
-                </p>
-                <p>
-                    We don't just follow the technological wave; we help create it. Our seasoned team applies specialized knowledge in AI, Machine Learning, and Data Science to solve complex problems and deliver measurable business value today.
-                </p>
-                <div class="stats">
-                    <div class="stat-item">
-                        <span class="stat-number" data-count="50" data-suffix="+">0</span>
-                        <span class="stat-text">Solutions Deployed</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number" data-count="100" data-suffix="%">0</span>
-                        <span class="stat-text">Client Satisfaction</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number" data-count="5" data-suffix="+">0</span>
-                        <span class="stat-text">Years of Collective Expertise</span>
-                    </div>
-                </div>
-            </div>
-            <div class="about-image">
-                <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Intelligent Solutions & Data Visualization">
-            </div>
+     <div class="about">
+      <section class="about-banner">
+        <div class="about-banner-overlay">
+          <h1>About Techya Verse</h1>
+          <p>Building intelligent digital solutions powered by AI and modern technology</p>
+          <button class="about-banner-btn">
+            <span>Talk To Expert</span>
+            <i data-lucide="arrow-right" class="about-banner-btn-icon"></i>
+          </button>
+          
         </div>
-    </div>
-</section>
+      </section>
+
+      <!--About Section -->
+
+      <section class="about-section" id="about-section">
+        <div class="about-container">
+      
+          <!-- LEFT IMAGE STACK -->
+          <div class="about-image-wrapper">
+            <img
+              src="/static/media/about2.png"
+              alt="Tech innovation"
+              class="about-main-image"
+            />
+      
+            <div class="about-experience-box">
+              <i data-lucide="award" class="about-exp-icon"></i>
+              <div class="about-exp-content">
+                <h3>
+                  <span id="about-exp-counter">1</span>+
+                </h3>
+                <p>Years of Experience</p>
+              </div>
+            </div>
+      
+            <div class="about-secondary-image">
+              <img
+                src="/static/media/about3.png"
+                alt="AI systems"
+              />
+              
+            </div>
+          </div>
+      
+          <!-- RIGHT CONTENT -->
+          <div class="about-content">
+            <h2 class="about-heading">
+              Engineering Intelligent Digital Solutions
+            </h2>
+      
+            <p class="about-description">
+              Techya Verse is focused on building future-ready systems using AI,
+              modern web technologies, and scalable architectures. We help
+              businesses move faster, smarter, and more efficiently.
+            </p>
+      
+            <div class="about-feature">
+              <div class="about-icon-box">
+                <i data-lucide="trending-up"></i>
+              </div>
+              <div>
+                <h4>AI-Driven Business Growth</h4>
+                <p>
+                  From predictive analytics to intelligent automation, we create
+                  AI solutions that directly impact performance and decision-making.
+                </p>
+              </div>
+            </div>
+      
+            <div class="about-feature">
+              <div class="about-icon-box">
+                <i data-lucide="cpu"></i>
+              </div>
+              <div>
+                <h4>Advanced Technology Consulting</h4>
+                <p>
+                  We design and consult on AI, web platforms, cloud systems,
+                  blockchain solutions, and scalable digital products.
+                </p>
+              </div>
+            </div>
+      
+            <a href="/about" class="about-btn">
+              About Techya Verse →
+            </a>
+          </div>
+      
+        </div>
+      </section>
+      
+      <!--What Make US Different -->
+     
+
+     </div> 
+
 {% endblock %}
 
 {% block extra_js %}

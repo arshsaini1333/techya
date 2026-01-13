@@ -610,7 +610,7 @@
     }
     .problem-card {
      width: 80%;
-     height: 70vh;
+     height: fit-content;
       display: flex;
       flex-direction: column;
       justify-content: space-between;

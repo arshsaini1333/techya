@@ -53,7 +53,7 @@
   }
   
   .tv-footer-col ul li a:hover {
-    color: #f97316;
+    color: #ff4305;
   }
   
   /* Contact CTA */
@@ -61,7 +61,7 @@
     display: inline-block;
     margin-top: 8px;
     padding: 10px 18px;
-    background: #f97316;
+    background: #ff4305;
     color: #ffffff !important;
     border-radius: 6px;
     font-size: 14px;
