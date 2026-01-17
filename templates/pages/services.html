@@ -3,182 +3,130 @@
 {% block title %}Services - TechYa Verse{% endblock %}
 
 {% block content %}
- <div class="services">
-  <!-- INTRO -->
-  <section class="services-intro" id="services-intro">
-    <div class="services-container">
-      <h1 class="services-main-heading">Our Services</h1>
-      <p class="services-intro-text">
-        Techya Verse builds intelligent, scalable, and future-ready digital solutions.
-        Our services span advanced AI, modern web systems, and data-driven technologies
-        designed to solve real business problems and deliver long-term value.
+<div class="services">
+
+  <section class="service-banner">
+    <div class="service-banner-overlay"></div>
+  
+    <div class="service-banner-content">
+      <h1>Our Services</h1>
+      <p>
+        We build scalable digital solutions using AI, automation, and modern web
+        technologies to help businesses grow faster.
+      </p>
+      <a href="#services" class="service-banner-cta">Explore Services</a>
+    </div>
+  </section>
+  
+
+  <!--Services Section-->
+  <section class="tv-services">
+    <div class="tv-services-header">
+      <h2>What We Engineer for the Future</h2>
+      <p>
+        We design and build intelligent systems, scalable platforms, and
+        automation-driven products that solve real business problems.
       </p>
     </div>
-  </section>
-
-  <!-- SERVICE 1 -->
-  <section class="services-row services-bg-soft">
-    <div class="services-container services-row-grid">
-      <div class="services-image">
-        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" alt="Web development">
-      </div>
-      <div class="services-content">
-        <h2 class="services-heading">Web Development</h2>
-        <p>
-          We design and develop modern, high-performance websites and web applications.
-          Our focus is on scalability, clean architecture, and seamless user experience.
-          From landing pages to complex platforms, everything is built to convert and scale.
-        </p>
-        <a href="#" class="services-link">Learn More →</a>
-      </div>
+  
+    <div class="tv-services-grid">
+  
+      <a href="/services/web-development" class="tv-service-card">
+        <i data-lucide="globe"></i>
+        <h3>Web Development</h3>
+        <p>High-performance websites and web applications built to scale.</p>
+        <span class="link">Learn more →</span>
+      </a>
+  
+      <a href="/services/generative-ai" class="tv-service-card">
+        <i data-lucide="sparkles"></i>
+        <h3>Generative AI</h3>
+        <p>AI systems that generate content, insights, and intelligent outputs.</p>
+        <span class="link">Learn more →</span>
+      </a>
+  
+      <a href="/services/agentic-ai" class="tv-service-card">
+        <i data-lucide="bot"></i>
+        <h3>Agentic AI</h3>
+        <p>Autonomous agents that reason, plan, and execute complex tasks.</p>
+        <span class="link">Learn more →</span>
+      </a>
+  
+      <a href="/services/ai-workflows" class="tv-service-card">
+        <i data-lucide="git-branch"></i>
+        <h3>AI Workflows</h3>
+        <p>End-to-end AI pipelines designed for reliability and efficiency.</p>
+        <span class="link">Learn more →</span>
+      </a>
+  
+      <a href="/services/algo-trading" class="tv-service-card">
+        <i data-lucide="trending-up"></i>
+        <h3>Algo Trading</h3>
+        <p>Data-driven trading systems powered by automation and analytics.</p>
+        <span class="link">Learn more →</span>
+      </a>
+  
+      <a href="/services/machine-learning" class="tv-service-card">
+        <i data-lucide="brain"></i>
+        <h3>Machine Learning</h3>
+        <p>Predictive models trained on clean, structured, and meaningful data.</p>
+        <span class="link">Learn more →</span>
+      </a>
+  
+      <a href="/services/blockchain" class="tv-service-card">
+        <i data-lucide="shield-check"></i>
+        <h3>Blockchain</h3>
+        <p>Secure, transparent decentralized systems built for trust.</p>
+        <span class="link">Learn more →</span>
+      </a>
+  
+      <a href="/services/web-scraping" class="tv-service-card">
+        <i data-lucide="search"></i>
+        <h3>Web Scraping</h3>
+        <p>Scalable and accurate data extraction from complex sources.</p>
+        <span class="link">Learn more →</span>
+      </a>
+  
+      <a href="/services/computer-vision" class="tv-service-card">
+        <i data-lucide="eye"></i>
+        <h3>Computer Vision</h3>
+        <p>Systems that detect, analyze, and interpret visual data.</p>
+        <span class="link">Learn more →</span>
+      </a>
+  
     </div>
   </section>
 
-  <!-- SERVICE 2 -->
-  <section class="services-row">
-    <div class="services-container services-row-grid services-row-reverse">
-      <div class="services-image">
-        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995" alt="Generative AI">
-      </div>
-      <div class="services-content">
-        <h2 class="services-heading">Generative AI</h2>
-        <p>
-          We build Generative AI solutions that create text, images, and insights from data.
-          Our systems help automate content creation, enhance creativity, and improve decision-making.
-          Every model is optimized for reliability and real-world use.
-        </p>
-        <a href="#" class="services-link">Learn More →</a>
-      </div>
-    </div>
-  </section>
 
-  <!-- SERVICE 3 -->
-  <section class="services-row services-bg-soft">
-    <div class="services-container services-row-grid">
-      <div class="services-image">
-        <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485" alt="Agentic AI">
-      </div>
-      <div class="services-content">
-        <h2 class="services-heading">Agentic AI</h2>
-        <p>
-          Agentic AI systems act autonomously to plan, reason, and execute tasks.
-          We build AI agents that collaborate, adapt, and make decisions across workflows.
-          Ideal for complex automation and multi-step problem solving.
-        </p>
-        <a href="#" class="services-link">Learn More →</a>
-      </div>
+  <!--Technologies We Used-->
+  <div class="tech-section">
+    <h2 class="section-title">Core Technologies</h2>
+    
+    <div class="category-bar" id="categoryBar">
+      <button class="cat-btn active" onclick="updateSlider('Web Dev')">Web Dev</button>
+      <button class="cat-btn" onclick="updateSlider('Agentic AI')">Agentic AI</button>
+        <button class="cat-btn" onclick="updateSlider('Machine Learning')">Machine Learning</button>
+        <button class="cat-btn" onclick="updateSlider('Generative AI')">Generative AI</button>
+        <button class="cat-btn" onclick="updateSlider('Computer Vision')">Computer Vision</button>
+        <button class="cat-btn" onclick="updateSlider('Web Scraping')">Web Scraping</button>        
+        <button class="cat-btn" onclick="updateSlider('Cloud')">Cloud</button>
+        <button class="cat-btn" onclick="updateSlider('Algo Trading')">Algo Trading</button>
+        <button class="cat-btn" onclick="updateSlider('Blockchain')">Blockchain</button>
     </div>
-  </section>
 
-  <!-- SERVICE 4 -->
-  <section class="services-row">
-    <div class="services-container services-row-grid services-row-reverse">
-      <div class="services-image">
-        <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c" alt="AI Workflow">
-      </div>
-      <div class="services-content">
-        <h2 class="services-heading">AI Workflow Automation</h2>
-        <p>
-          We design intelligent workflows that automate repetitive and data-heavy processes.
-          By combining AI models with business logic, we reduce manual effort and errors.
-          These workflows scale effortlessly as operations grow.
-        </p>
-        <a href="#" class="services-link">Learn More →</a>
-      </div>
+    <div class="slider-container">
+        <div class="slider-track" id="sliderTrack">
+            </div>
     </div>
-  </section>
-
-  <!-- SERVICE 5 -->
-  <section class="services-row services-bg-soft">
-    <div class="services-container services-row-grid">
-      <div class="services-image">
-        <img src="/static/media/algo.jpg" alt="Algo trading">
-      </div>
-      <div class="services-content">
-        <h2 class="services-heading">Algo Trading</h2>
-        <p>
-          We develop algorithmic trading systems powered by data, logic, and automation.
-          Our strategies focus on risk management, speed, and consistency.
-          Built for backtesting, live execution, and continuous optimization.
-        </p>
-        <a href="#" class="services-link">Learn More →</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- SERVICE 6 -->
-  <section class="services-row">
-    <div class="services-container services-row-grid services-row-reverse">
-      <div class="services-image">
-        <img src="/static/media/ml.jpg" alt="Machine learning">
-      </div>
-      <div class="services-content">
-        <h2 class="services-heading">Machine Learning</h2>
-        <p>
-          We build machine learning models that analyze patterns and predict outcomes.
-          From recommendation systems to forecasting engines, our models are production-ready.
-          Accuracy, scalability, and maintainability are always prioritized.
-        </p>
-        <a href="#" class="services-link">Learn More →</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- SERVICE 7 -->
-  <section class="services-row services-bg-soft">
-    <div class="services-container services-row-grid">
-      <div class="services-image">
-        <img src="https://images.unsplash.com/photo-1639322537228-f710d846310a" alt="Blockchain">
-      </div>
-      <div class="services-content">
-        <h2 class="services-heading">Blockchain</h2>
-        <p>
-          We build secure, decentralized applications using blockchain technology.
-          Our solutions focus on transparency, trust, and automation through smart contracts.
-          Ideal for finance, supply chain, and data integrity use cases.
-        </p>
-        <a href="#" class="services-link">Learn More →</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- SERVICE 8 -->
-  <section class="services-row">
-    <div class="services-container services-row-grid services-row-reverse">
-      <div class="services-image">
-        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475" alt="Web scraping">
-      </div>
-      <div class="services-content">
-        <h2 class="services-heading">Web Scraping</h2>
-        <p>
-          We extract structured data from complex websites at scale.
-          Our scraping solutions are reliable, efficient, and compliant with best practices.
-          Perfect for market research, analytics, and competitive intelligence.
-        </p>
-        <a href="#" class="services-link">Learn More →</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- SERVICE 9 -->
-  <section class="services-row services-bg-soft">
-    <div class="services-container services-row-grid">
-      <div class="services-image">
-        <img src="https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b" alt="Computer vision">
-      </div>
-      <div class="services-content">
-        <h2 class="services-heading">Computer Vision</h2>
-        <p>
-          We build computer vision systems that understand images and video.
-          From object detection to visual analytics, our solutions enable automation and insight.
-          Designed for accuracy and real-time performance.
-        </p>
-        <a href="#" class="services-link">Learn More →</a>
-      </div>
-    </div>
-  </section>
+</div> 
+  
 
 </div>
 
 {% endblock %}
 
+{% block page_js %}
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="{{ url_for('static', filename='js/services.js') }}"></script>
+
+{% endblock %}

@@ -52,37 +52,58 @@ def about():
 def services():
     return render_template('pages/services.html')
 
-@app.route('/services/ai-machine-learning')
-def service_ai_ml():
-    return render_template('service_pages/ai_ml.html')
-
 @app.route('/services/web-development')
-def service_web_dev():
-    return render_template('service_pages/web_dev.html')
+def service_web_development():
+    return render_template('service_pages/web-development.html')
 
-@app.route('/services/neural-networks')
-def service_neural_networks():
-    return render_template('service_pages/neural_networks.html')
 
-@app.route('/services/blockchain-web3')
+@app.route('/services/generative-ai')
+def service_generative_ai():
+    return render_template('service_pages/generative-ai.html')
+
+
+@app.route('/services/agentic-ai')
+def service_agentic_ai():
+    return render_template('service_pages/agentic-ai.html')
+
+
+@app.route('/services/ai-workflows')
+def service_ai_workflows():
+    return render_template('service_pages/ai-workflows.html')
+
+
+@app.route('/services/algo-trading')
+def service_algo_trading():
+    return render_template('service_pages/algo-trading.html')
+
+
+@app.route('/services/machine-learning')
+def service_machine_learning():
+    return render_template('service_pages/machine-learning.html')
+
+
+@app.route('/services/blockchain')
 def service_blockchain():
     return render_template('service_pages/blockchain.html')
 
-@app.route('/services/data-science')
-def service_data_science():
-    return render_template('service_pages/data_science.html')
 
-@app.route('/services/cloud-devops')
-def service_cloud_devops():
-    return render_template('service_pages/cloud_devops.html')
+@app.route('/services/web-scraping')
+def service_web_scraping():
+    return render_template('service_pages/web-scraping.html')
 
-@app.route('/services/generative-ai-agents')
-def service_generative_ai():
-    return render_template('service_pages/generative_ai.html')
+
+@app.route('/services/computer-vision')
+def service_computer_vision():
+    return render_template('service_pages/computer-vision.html')
+
 
 @app.route('/portfolio')
 def portfolio():
     return render_template('pages/portfolio.html')
+
+@app.route('/blog')
+def blog():
+    return render_template('pages/blog.html')
 
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
@@ -160,9 +181,9 @@ def send_contact_email(name, email, company, service_type, description):
         print(f"Error sending email: {str(e)}")
         raise
 
-@app.route('/blog')
-def blog():
-    return render_template('blog.html')
+# @app.route('/blog')
+# def blog():
+#     return render_template('blog.html')
 
 @app.route('/chat', methods=['POST'])
 def chat():

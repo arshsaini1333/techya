@@ -880,10 +880,9 @@
     }
     
     .services-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
       margin-bottom: 50px;
+      text-align: center;
+      width: 100%;
     }
     
     .services-tag {
@@ -895,6 +894,8 @@
     .services-description
     {
       width: 70%;
+      margin: auto;
+      font-size: 1.1rem;
       color: #333;
     }
     .services-header h2 {
@@ -902,24 +903,14 @@
       font-weight: 700;
     }
     
-    .carousel-controls {
-      display: flex;
-      gap: 12px;
-    }
+   
     
-    .arrow {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      border: 1px solid #ff4305;
-      background: transparent;
-      color: #ff4305;
-      font-size: 18px;
-      cursor: pointer;
-    }
+  
     
     .carousel-wrapper {
-      overflow: hidden;
+      
+      position: relative;
+  overflow: hidden;
     }
     
     .carousel-track {
@@ -1004,6 +995,52 @@
       }
       
     }
+
+    /* COMMON ARROW STYLES */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+
+  width: 48px;
+  height: 48px;
+
+  border: 2px solid #ff4305;
+  color: #ff4305;
+  border-radius: 50%;
+background-color: white;
+  font-size: 22px;
+  cursor: pointer;
+
+  display: grid;
+  place-items: center;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+/* LEFT */
+.carousel-arrow-left {
+  left: 4px; /* half outside for premium look */
+}
+
+/* RIGHT */
+.carousel-arrow-right {
+  right: 4px;
+}
+
+/* HOVER */
+.carousel-arrow:hover {
+  background: #ff4305;
+  transform: translateY(-50%) scale(1.05);
+  color: white;
+}
+
+/* OPTIONAL: hide on mobile */
+@media (max-width: 768px) {
+  .carousel-arrow {
+    display: none;
+  }
+}
 
 
     /* Testimonials */

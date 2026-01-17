@@ -1,22 +1,36 @@
+document.addEventListener("DOMContentLoaded", () => {
+  if (window.lucide) {
+    lucide.createIcons();
+  }
 
-  lucide.createIcons();
   let aboutCounterStarted = false;
   const aboutCounter = document.getElementById("about-exp-counter");
 
+  if (!aboutCounter) return;
+
   const aboutObserver = new IntersectionObserver(
     (entries) => {
-      if (entries[0].isIntersecting && !aboutCounterStarted) {
+      const entry = entries[0];
+
+      if (entry.isIntersecting && !aboutCounterStarted) {
         aboutCounterStarted = true;
-        let count = 1;
+
+        let count = 0;
+        const target = 5;
+
         const interval = setInterval(() => {
           count++;
           aboutCounter.textContent = count;
-          if (count === 5) clearInterval(interval);
+
+          if (count >= target) {
+            clearInterval(interval);
+          }
         }, 200);
       }
     },
     { threshold: 0.5 }
   );
 
-  aboutObserver.observe(document.getElementById("about-section"));
-
+  // 🚨 THIS WAS MISSING
+  aboutObserver.observe(aboutCounter);
+});
