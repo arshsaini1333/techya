@@ -2,7 +2,8 @@ const navbar = document.getElementById("tvNavbar");
 const drawer = document.getElementById("tvDrawer");
 const openBtn = document.getElementById("tvHamburger");
 const closeBtn = document.getElementById("tvCloseDrawer");
-
+const accordion = document.querySelector(".tv-accordion");
+  const accordionPanel = document.querySelector(".tv-accordion-panel");
 let lastScrollY = window.scrollY;
 let isFloating = false;
 
@@ -55,5 +56,23 @@ drawer.querySelectorAll("a").forEach(link => {
   link.addEventListener("click", () => {
     drawer.classList.remove("active");
     document.body.style.overflow = "";
+  });
+});
+
+
+accordion.addEventListener("click", () => {
+  accordion.classList.toggle("active");
+
+  if (accordionPanel.style.maxHeight) {
+    accordionPanel.style.maxHeight = null;
+  } else {
+    accordionPanel.style.maxHeight = accordionPanel.scrollHeight + "px";
+  }
+});
+
+
+document.querySelectorAll(".tv-drawer-links a").forEach(link => {
+  link.addEventListener("click", () => {
+    drawer.classList.remove("active");
   });
 });

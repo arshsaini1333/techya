@@ -124,7 +124,7 @@ def contact():
             flash('There was an error sending your message. Please try again later.', 'error')
             return redirect(url_for('contact'))
     
-    return render_template('contact.html')
+    return render_template('pages/contact.html')
 
 def send_contact_email(name, email, company, service_type, description):
     """Send contact form email"""

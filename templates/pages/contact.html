@@ -1,221 +1,122 @@
-{% extends "base.html" %}
+{% extends "base/base.html" %}
 
 {% block title %}Contact Us - TechYa Verse{% endblock %}
 
-{% block extra_css %}
-<style>
-    .contact {
-        background: var(--secondary);
-        position: relative;
-        overflow: hidden;
-        padding-top: 120px;
-    }
-
-    .contact-content {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 80px;
-    }
-
-    .contact-info {
-        display: flex;
-        flex-direction: column;
-        gap: 40px;
-    }
-
-    .contact-item {
-        display: flex;
-        align-items: flex-start;
-        gap: 25px;
-        padding: 25px;
-        border-radius: 15px;
-        transition: var(--transition);
-        background: rgba(255, 255, 255, 0.9);
-        border: 1px solid rgba(255, 67, 5, 0.2);
-    }
-
-    .contact-item:hover {
-        transform: translateX(10px);
-        background: rgba(255, 255, 255, 0.95);
-        box-shadow: 0 10px 30px rgba(255, 67, 5, 0.1);
-        border-color: rgba(255, 67, 5, 0.3);
-    }
-
-    .contact-icon {
-        font-size: 28px;
-        color: rgb(255, 67, 5);
-        margin-top: 5px;
-        width: 60px;
-        height: 60px;
-        background: rgba(255, 67, 5, 0.1);
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-shadow: none;
-    }
-
-    .contact-form {
-        background: rgba(255, 255, 255, 0.9);
-        padding: 50px;
-        border-radius: 20px;
-        box-shadow: var(--shadow);
-        border: 1px solid rgba(255, 67, 5, 0.2);
-        backdrop-filter: blur(10px);
-    }
-
-    .alert {
-        padding: 15px 20px;
-        border-radius: 10px;
-        margin-bottom: 20px;
-        animation: slideDown 0.3s ease;
-    }
-
-    .alert-success {
-        background: rgba(255, 67, 5, 0.1);
-        border: 1px solid rgba(255, 67, 5, 0.3);
-        color: rgb(255, 67, 5);
-    }
-
-    .alert-error {
-        background: rgba(255, 67, 5, 0.1);
-        border: 1px solid rgba(255, 67, 5, 0.3);
-        color: rgb(255, 67, 5);
-    }
-
-    @keyframes slideDown {
-        from {
-            opacity: 0;
-            transform: translateY(-20px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    .form-group {
-        margin-bottom: 30px;
-        position: relative;
-    }
-
-    .form-control {
-        width: 100%;
-        padding: 18px 25px;
-        border: 1px solid rgba(255, 67, 5, 0.2);
-        border-radius: 10px;
-        font-size: 1rem;
-        transition: var(--transition);
-        background: rgba(255, 255, 255, 1);
-        color: #333333;
-        font-family: 'Exo 2', sans-serif;
-    }
-    
-    .form-control::placeholder {
-        color: #999999;
-    }
-
-    .form-control:focus {
-        border-color: rgb(255, 67, 5);
-        outline: none;
-        box-shadow: 0 0 0 3px rgba(255, 67, 5, 0.1);
-        background: rgba(255, 255, 255, 1);
-    }
-
-    textarea.form-control {
-        min-height: 180px;
-        resize: vertical;
-    }
-
-    @media (max-width: 1200px) {
-        .contact-content {
-            grid-template-columns: 1fr;
-            gap: 60px;
-        }
-    }
-</style>
-{% endblock %}
 
 {% block content %}
-<section class="contact">
-    <div class="container">
-        <div class="section-title">
-            <h2>Start Your AI Journey</h2>
-            <p>Ready to transform your business with cutting-edge technology? Let's discuss your project.</p>
+<div class="contact">
+    <section class="portfolio-contact-hero">
+        <div class="portfolio-contact-hero-overlay"></div>
+      
+        <div class="portfolio-contact-hero-content">
+          <h1 class="portfolio-contact-hero-heading">
+            Let’s Build Something Meaningful Together
+          </h1>
+      
+          <p class="portfolio-contact-hero-subheading">
+            Have an idea, product, or challenge in mind? Talk to our experts and discover
+            how Techya Verse can help you design, build, and scale reliable technology.
+          </p>
+      
+          <a href="#contact-form" class="portfolio-contact-hero-btn">
+            Talk to an Expert
+          </a>
         </div>
-        <div class="contact-content">
-            <div class="contact-info">
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fas fa-map-marker-alt"></i>
-                    </div>
-                    <div>
-                        <h3>Our Innovation Hub</h3>
-                        <p>India</p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <div>
-                        <h3>Email Address</h3>
-                        <p>info@techyaverse.com</p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fas fa-clock"></i>
-                    </div>
-                    <div>
-                        <h3>Working Hours</h3>
-                        <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
-                    </div>
-                </div>
-            </div>
-            <div class="contact-form">
-                <form id="contactForm" method="POST" action="{{ url_for('contact') }}">
-                    <div class="form-group">
-                        <input type="text" name="name" class="form-control" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" name="email" class="form-control" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" name="company" class="form-control" placeholder="Company Name" required>
-                    </div>
-                    <div class="form-group">
-                        <select name="service_type" class="form-control" required>
-                            <option value="" disabled selected>Select Service Type</option>
-                            <option value="ai-ml">AI & Machine Learning</option>
-                            <option value="web-dev">Web Development</option>
-                            <option value="blockchain">Blockchain Solutions</option>
-                            <option value="data-science">Data Science & Analytics</option>
-                            <option value="cloud">Cloud & DevOps</option>
-                            <option value="consulting">AI Consulting</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <textarea name="description" class="form-control" placeholder="Describe your project requirements, goals, and any specific technologies you're interested in..." required></textarea>
-                    </div>
-                    <button type="submit" class="btn">Initiate Project</button>
-                </form>
-            </div>
+      </section>
+      
+      <!--Contact SEction-->
+      <section class="portfolio-contact-section">
+        <div class="portfolio-contact-container">
+      
+          <!-- LEFT CONTENT -->
+          <div class="portfolio-contact-left">
+      
+            <h2 class="portfolio-contact-heading">
+              Send Your Query To Our Team
+            </h2>
+      
+            <p class="portfolio-contact-subheading">
+              Share your idea, requirement, or question with us.
+              Our team will review your message and get back to you with
+              the right guidance and next steps.
+            </p>
+          </div>
+      
+          <!-- RIGHT FORM -->
+          <div class="portfolio-contact-right">
+            <form class="portfolio-contact-form">
+      
+              <div class="portfolio-form-row">
+                <input
+                  type="text"
+                  placeholder="Full Name"
+                  class="portfolio-form-input"
+                  required
+                />
+                <input
+                  type="email"
+                  placeholder="Email Address"
+                  class="portfolio-form-input"
+                  required
+                />
+              </div>
+      
+              <input
+                type="tel"
+                placeholder="Phone Number"
+                class="portfolio-form-input portfolio-form-full"
+              />
+      
+              <textarea
+                rows="5"
+                placeholder="Write Message"
+                class="portfolio-form-textarea"
+                required
+              ></textarea>
+      
+              <button type="submit" class="portfolio-form-btn">
+                Send a Message
+              </button>
+            </form>
+          </div>
+      
         </div>
-    </div>
-</section>
+      
+        <!-- CONTACT INFO -->
+        <div class="portfolio-contact-info">
+      
+          <div class="portfolio-contact-info-item">
+            <i data-lucide="map-pin"></i>
+            <div>
+              <h4>Visit Our Office</h4>
+              <p>Chandigarh, India</p>
+            </div>
+          </div>
+      
+          <div class="portfolio-contact-info-item">
+            <i data-lucide="mail"></i>
+            <div>
+              <h4>Send Email</h4>
+              <p>info@techyaverse.com</p>
+            </div>
+          </div>
+      
+          <div class="portfolio-contact-info-item">
+            <i data-lucide="phone"></i>
+            <div>
+              <h4>Call Anytime</h4>
+              <p>+91 98765 43210</p>
+            </div>
+          </div>
+      
+        </div>
+      </section>
+      
+
+</div>
 {% endblock %}
 
 {% block extra_js %}
-<script>
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-        // Form will submit normally to Flask route
-        // Show loading state
-        const submitBtn = this.querySelector('button[type="submit"]');
-        const originalText = submitBtn.textContent;
-        submitBtn.textContent = 'Sending...';
-        submitBtn.disabled = true;
-    });
-</script>
+
 {% endblock %}
 

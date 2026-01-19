@@ -3,12 +3,316 @@
 {% block title %}Portfolio - TechYa Verse{% endblock %}
 
 {% block extra_css %}
-
+<!-- CSS already added by you earlier -->
 {% endblock %}
 
 {% block content %}
-<div class="coming-soon">
- Coming Soon
+<div class="portfolio">
+
+  <!-- HERO SECTION -->
+  <section class="portfolio-hero">
+    <div class="portfolio-hero-overlay"></div>
+
+    <div class="portfolio-hero-content">
+
+      <h1 class="portfolio-hero-heading">
+        We Build Products, We Power Businesses
+      </h1>
+
+      <p class="portfolio-hero-subheading">
+        Techya Verse builds real-world AI, blockchain, and algo trading products used by users today,
+        and we help startups and enterprises turn ambitious ideas into reliable, market-ready technology.
+      </p>
+
+      <div class="portfolio-hero-actions">
+        <a href="#projects" class="portfolio-btn-primary">Explore Our Products</a>
+        <a href="#contact" class="portfolio-btn-secondary">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS SECTION -->
+  <section class="portfolio-projects-section" id="projects">
+    <div class="portfolio-products-header">
+        <h2 class="portfolio-products-heading">
+          Products Built for Real Users
+        </h2>
+        <p class="portfolio-products-subheading">
+          We design, build, and operate our own AI, blockchain, and automation products used in real-world scenarios.
+          The same engineering excellence powers every solution we build for our clients.
+        </p>
+      </div>
+      
+    <div class="portfolio-projects-container">
+
+      <!-- 1 -->
+      <div class="portfolio-project-card">
+        <div class="portfolio-project-image-wrapper">
+          <img src="/static/media/portfolio/vt.jpeg" class="portfolio-project-image" />
+          <div class="portfolio-project-overlay">
+            <h3>AI Video Transcription</h3>
+            <p>
+              Transcribes MP4 videos into accurate text using AI. Supports single and batch uploads,
+              making content searchable, accessible, and easy to repurpose.
+            </p>
+            <a href="https://vt.techyaverse.com/"  class="portfolio-project-btn" target="_blank">Explore Product Now</a>
+          </div>
+        </div>
+        <div class="portfolio-project-name-badge">AI Video Transcription</div>
+      </div>
+
+      <!-- 2 -->
+      <div class="portfolio-project-card">
+        <div class="portfolio-project-image-wrapper">
+          <img src="/static/media/portfolio/vto.png" class="portfolio-project-image" />
+          <div class="portfolio-project-overlay">
+            <h3>Virtual Try-On Fashion</h3>
+            <p>
+              AI-powered fashion try-on experience allowing users to preview clothing virtually,
+              enhanced with an AI shopkeeper for smart recommendations.
+            </p>
+            <a href="https://shop.techyaverse.com/" class="portfolio-project-btn" target="_blank">Explore Product Now</a>
+          </div>
+        </div>
+        <div class="portfolio-project-name-badge">Virtual Try-On Fashion</div>
+      </div>
+
+      <!-- 3 -->
+      <div class="portfolio-project-card">
+        <div class="portfolio-project-image-wrapper">
+          <img src="/static/media/portfolio/tb.png" class="portfolio-project-image" />
+          <div class="portfolio-project-overlay">
+            <h3>Automated Trading Bot</h3>
+            <p>
+              Web-based crypto trading system that executes algorithmic strategies,
+              manages risk, and automates trades across multiple exchanges.
+            </p>
+            <a href="https://tb.techyaverse.com/" target="_blank" class="portfolio-project-btn">Explore Product Now</a>
+          </div>
+        </div>
+        <div class="portfolio-project-name-badge">Automated Trading Bot</div>
+      </div>
+
+      <!-- 4 -->
+      <div class="portfolio-project-card">
+        <div class="portfolio-project-image-wrapper">
+          <img src="/static/media/portfolio/tm.png" class="portfolio-project-image" />
+          <div class="portfolio-project-overlay">
+            <h3>SPL Token Manager</h3>
+            <p>
+              Solana-based token management platform to view balances, transfer SPL tokens,
+              and manage wallets across devnet and mainnet.
+            </p>
+            <a href="https://sl.techyaverse.com/" target="_blank" class="portfolio-project-btn">Explore Product Now</a>
+          </div>
+        </div>
+        <div class="portfolio-project-name-badge">SPL Token Manager</div>
+      </div>
+
+      <!-- 5 -->
+      <div class="portfolio-project-card">
+        <div class="portfolio-project-image-wrapper">
+          <img src="/static/media/portfolio/twitter.png" class="portfolio-project-image" />
+          <div class="portfolio-project-overlay">
+            <h3>Twitter Content Automation</h3>
+            <p>
+              Automatically generates and posts high-quality tech content daily,
+              complete with scheduling, analytics, and a real-time monitoring dashboard.
+            </p>
+            <a href="https://twit.techyaverse.com/" class="portfolio-project-btn" target="_blank">Explore Product Now</a>
+          </div>
+        </div>
+        <div class="portfolio-project-name-badge">Twitter Content Automation</div>
+      </div>
+
+      <!-- 6 -->
+      <div class="portfolio-project-card">
+        <div class="portfolio-project-image-wrapper">
+          <img src="/static/media/portfolio/lp.png" class="portfolio-project-image" />
+          <div class="portfolio-project-overlay">
+            <h3>LinkedIn Automation</h3>
+            <p>
+              Automated LinkedIn posting system that publishes AI-generated content
+              to company pages or profiles with secure OAuth authentication.
+            </p>
+            <a href="https://n8n.techyaverse.com/signin?redirect=%252F" class="portfolio-project-btn" target="_blank">Explore Product Now</a>
+          </div>
+        </div>
+        <div class="portfolio-project-name-badge">LinkedIn Automation</div>
+      </div>
+
+      <!-- 7 -->
+      <div class="portfolio-project-card">
+        <div class="portfolio-project-image-wrapper">
+          <img src="/static/media/portfolio/id.jpeg" class="portfolio-project-image" />
+          <div class="portfolio-project-overlay">
+            <h3>Person Detection System</h3>
+            <p>
+              Real-time computer vision system that detects people in camera feeds
+              and triggers alerts for security and monitoring use cases.
+            </p>
+            <a href="#" class="portfolio-project-btn">Explore Product Now</a>
+          </div>
+        </div>
+        <div class="portfolio-project-name-badge">Person Detection System</div>
+      </div>
+
+      <!-- 8 -->
+      <div class="portfolio-project-card">
+        <div class="portfolio-project-image-wrapper">
+          <img src="/static/media/portfolio/rs.jpeg" class="portfolio-project-image" />
+          <div class="portfolio-project-overlay">
+            <h3>AI Recruitment Platform</h3>
+            <p>
+              End-to-end AI hiring system that automates resume screening,
+              interviews, candidate ranking, and skill evaluation at scale.
+            </p>
+            <a href="#" class="portfolio-project-btn">Explore Product Now</a>
+          </div>
+        </div>
+        <div class="portfolio-project-name-badge">AI Recruitment Platform</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!--REviews About Projects -->
+  <section class="portfolio-reviews-section">
+    <div class="portfolio-reviews-header">
+      <h2 class="portfolio-reviews-heading">
+        Trusted by Teams Building Real Products
+      </h2>
+      <p class="portfolio-reviews-subheading">
+        From startups to growing companies, teams across India and the US trust Techya Verse
+        to build reliable, scalable, and production-ready technology.
+      </p>
+    </div>
+  
+    <!-- ROW 1 (Left to Right) -->
+    <div class="portfolio-reviews-row portfolio-scroll-left">
+      <div class="portfolio-reviews-track">
+  
+        <div class="portfolio-review-card">
+          <div class="portfolio-stars">★★★★★</div>
+          <p>Techya Verse delivered an AI product that scaled smoothly in production. The execution was solid and professional.</p>
+          <h4>Rahul Mehta</h4>
+          <span>Founder, SaaS Startup</span>
+        </div>
+  
+        <div class="portfolio-review-card">
+          <div class="portfolio-stars">★★★★★</div>
+          <p>The automation system reduced our manual workload drastically. Clean architecture and reliable deployment.</p>
+          <h4>Jason Miller</h4>
+          <span>Product Manager, FinTech</span>
+        </div>
+  
+        <div class="portfolio-review-card">
+          <div class="portfolio-stars">★★★★★</div>
+          <p>We integrated their AI transcription product into our workflow seamlessly. Very well engineered.</p>
+          <h4>Ananya Sharma</h4>
+          <span>Content Lead, Media Company</span>
+        </div>
+  
+        <div class="portfolio-review-card">
+          <div class="portfolio-stars">★★★★★</div>
+          <p>The trading automation platform was stable and thoughtfully designed. Risk handling was impressive.</p>
+          <h4>Michael Brooks</h4>
+          <span>Crypto Trader</span>
+        </div>
+  
+        <div class="portfolio-review-card">
+          <div class="portfolio-stars">★★★★★</div>
+          <p>Great experience working with a team that understands both products and engineering.</p>
+          <h4>Rohit Verma</h4>
+          <span>CTO, Tech Startup</span>
+        </div>
+  
+        <!-- duplicate for smooth loop -->
+        <div class="portfolio-review-card">
+          <div class="portfolio-stars">★★★★★</div>
+          <p>Techya Verse delivered an AI product that scaled smoothly in production. The execution was solid and professional.</p>
+          <h4>Rahul Mehta</h4>
+          <span>Founder, SaaS Startup</span>
+        </div>
+  
+      </div>
+    </div>
+  
+    <!-- ROW 2 (Right to Left) -->
+    <div class="portfolio-reviews-row portfolio-scroll-right">
+      <div class="portfolio-reviews-track">
+  
+        <div class="portfolio-review-card">
+          <div class="portfolio-stars">★★★★★</div>
+          <p>The virtual try-on product significantly improved customer engagement on our platform.</p>
+          <h4>Priya Nair</h4>
+          <span>Head of Marketing, Fashion Brand</span>
+        </div>
+  
+        <div class="portfolio-review-card">
+          <div class="portfolio-stars">★★★★★</div>
+          <p>Reliable backend systems and clear communication throughout the project.</p>
+          <h4>Daniel Carter</h4>
+          <span>Engineering Manager, SaaS</span>
+        </div>
+  
+        <div class="portfolio-review-card">
+          <div class="portfolio-stars">★★★★★</div>
+          <p>The AI recruitment system helped us screen candidates faster without compromising quality.</p>
+          <h4>Amit Kulkarni</h4>
+          <span>HR Lead, Enterprise</span>
+        </div>
+  
+        <div class="portfolio-review-card">
+          <div class="portfolio-stars">★★★★★</div>
+          <p>Excellent understanding of AI workflows and real-world constraints.</p>
+          <h4>Sarah Thompson</h4>
+          <span>Operations Director</span>
+        </div>
+  
+        <div class="portfolio-review-card">
+          <div class="portfolio-stars">★★★★★</div>
+          <p>The LinkedIn automation saved hours every week while keeping content consistent.</p>
+          <h4>Kunal Singh</h4>
+          <span>Growth Manager</span>
+        </div>
+  
+        <!-- duplicate for smooth loop -->
+        <div class="portfolio-review-card">
+          <div class="portfolio-stars">★★★★★</div>
+          <p>The virtual try-on product significantly improved customer engagement on our platform.</p>
+          <h4>Priya Nair</h4>
+          <span>Head of Marketing, Fashion Brand</span>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+
+  
+  <!--CTA SECTION-->
+  <section class="portfolio-cta-section">
+    <div class="portfolio-cta-container">
+  
+      <div class="portfolio-cta-content">
+        <h2 class="portfolio-cta-heading">
+          Ready to Build Your Next Product?
+        </h2>
+        <p class="portfolio-cta-subheading">
+          Whether you’re launching a new idea or scaling an existing platform,
+          our team can help you design, build, and deploy production-ready solutions.
+        </p>
+      </div>
+  
+      <div class="portfolio-cta-action">
+        <a href="#contact" class="portfolio-cta-btn">
+          Get A Call Back
+        </a>
+      </div>
+  
+    </div>
+  </section>
+  
+
 </div>
 {% endblock %}
-

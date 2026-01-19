@@ -1,0 +1,231 @@
+/* ===============================
+   CONTACT HERO SECTION
+================================ */
+.portfolio-contact-hero {
+    position: relative;
+    height: 70vh;
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 6%;
+    background-image: url("/static/media/contactbg.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  /* Overlay for readability */
+  .portfolio-contact-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: 
+      rgba(2, 6, 23, 0.65)
+    ;
+    z-index: 1;
+  }
+  
+  /* Content */
+  .portfolio-contact-hero-content {
+    position: relative;
+    z-index: 2;
+    width: 90%;
+    color: #ffffff;
+  }
+  
+  /* Heading */
+  .portfolio-contact-hero-heading {
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 18px;
+  }
+  
+  /* Subheading */
+  .portfolio-contact-hero-subheading {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #e5e7eb;
+    margin-bottom: 32px;
+  }
+  
+  /* CTA Button */
+  .portfolio-contact-hero-btn {
+    display: inline-block;
+    background: #ff4305;
+    color: white;
+    padding: 14px 32px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  
+  .portfolio-contact-hero-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(251, 146, 60, 0.4);
+  }
+  
+  /* ===============================
+     RESPONSIVE
+  ================================ */
+  @media (max-width: 640px) {
+    .portfolio-contact-hero {
+      height: auto;
+      padding: 90px 6%;
+    }
+  }
+  
+
+  /* ===============================
+   CONTACT SECTION
+================================ */
+.portfolio-contact-section {
+    padding: 100px 6%;
+    background: #ffffff;
+  }
+  
+  .portfolio-contact-container {
+    max-width: 1280px;
+    margin: 0 auto 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+  
+  /* LEFT */
+  .portfolio-contact-label {
+    font-size: 14px;
+    color: #ff4305;
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: inline-block;
+  }
+  
+  .portfolio-contact-heading {
+    font-size: 4.5rem;
+    font-weight: bold;
+    color: #ff4305;
+    margin-bottom: 20px;
+    line-height: 1.2;
+  }
+  
+  .portfolio-contact-subheading {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #111;
+    max-width: 480px;
+  }
+  
+  /* RIGHT FORM */
+  .portfolio-contact-form {
+    background: transparent;
+  }
+  
+  .portfolio-form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+  }
+  
+  .portfolio-form-input,
+  .portfolio-form-textarea {
+    width: 100%;
+    background: #FFF7F3;
+    border: none;
+    padding: 16px;
+    border-radius: 10px;
+    font-size: 15px;
+    color: #020617;
+    outline: none;
+  }
+  
+  .portfolio-form-full {
+    margin-top: 16px;
+  }
+  
+  .portfolio-form-textarea {
+    margin-top: 16px;
+    resize: none;
+  }
+  
+  .portfolio-form-input::placeholder,
+  .portfolio-form-textarea::placeholder {
+    color: #64748b;
+  }
+  
+  .portfolio-form-btn {
+    margin-top: 24px;
+    background: #ff4305;
+    color: #ffffff;
+    padding: 14px 34px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 1px;
+  }
+  
+  /* ===============================
+     CONTACT INFO ROW
+  ================================ */
+  .portfolio-contact-info {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-top: 40px;
+    border-top: 0.5px solid #c1c1c1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+  
+  .portfolio-contact-info-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .portfolio-contact-info-item i {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    color: #ff4305;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .portfolio-contact-info-item svg{
+    color: #ff4305;
+    height: 2rem;
+    width: 2rem;
+  }
+  .portfolio-contact-info-item h4 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #020617;
+    margin-bottom: 4px;
+  }
+  
+  .portfolio-contact-info-item p {
+    font-size: 14px;
+    color: #475569;
+  }
+  
+  /* ===============================
+     RESPONSIVE
+  ================================ */
+  @media (max-width: 900px) {
+    .portfolio-contact-container {
+      grid-template-columns: 1fr;
+    }
+  
+    .portfolio-contact-info {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+  }
+  
