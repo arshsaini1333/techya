@@ -229,3 +229,151 @@
     }
   }
   
+
+  /* =====================================
+   GLOBAL SAFETY
+===================================== */
+* {
+  box-sizing: border-box;
+}
+
+/* =====================================
+   CONTACT HERO RESPONSIVE
+===================================== */
+@media (max-width: 1024px) {
+  .portfolio-contact-hero {
+    height: 60vh;
+    min-height: 380px;
+  }
+
+  .portfolio-contact-hero-heading {
+    font-size: 2.6rem;
+  }
+
+  .portfolio-contact-hero-subheading {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  .portfolio-contact-hero {
+    height: auto;
+    padding: 90px 6%;
+  }
+
+  .portfolio-contact-hero-heading {
+    font-size: 2.1rem;
+    line-height: 1.2;
+  }
+
+  .portfolio-contact-hero-subheading {
+    font-size: 15px;
+  }
+
+  .portfolio-contact-hero-btn {
+    padding: 12px 26px;
+    font-size: 15px;
+  }
+}
+
+/* =====================================
+   CONTACT SECTION LAYOUT
+===================================== */
+@media (max-width: 1024px) {
+  .portfolio-contact-heading {
+    font-size: 3.2rem;
+  }
+
+  .portfolio-contact-subheading {
+    max-width: 100%;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .portfolio-contact-section {
+    padding: 80px 6%;
+  }
+
+  .portfolio-contact-container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .portfolio-contact-left {
+    text-align: center;
+  }
+
+  .portfolio-contact-subheading {
+    margin: 0 auto;
+  }
+}
+
+/* =====================================
+   FORM RESPONSIVE
+===================================== */
+@media (max-width: 900px) {
+  .portfolio-form-row {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .portfolio-form-input,
+  .portfolio-form-textarea {
+    font-size: 14px;
+  }
+
+  .portfolio-form-btn {
+    width: 100%;
+    padding: 14px;
+  }
+}
+
+/* =====================================
+   CONTACT INFO ROW
+===================================== */
+@media (max-width: 1024px) {
+  .portfolio-contact-info {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .portfolio-contact-info {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding-top: 30px;
+  }
+
+  .portfolio-contact-info-item {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .portfolio-contact-info-item div {
+    text-align: center;
+  }
+}
+
+/* =====================================
+   SMALL MOBILE SAFETY
+===================================== */
+@media (max-width: 420px) {
+  .portfolio-contact-heading {
+    font-size: 1.9rem;
+  }
+
+  .portfolio-contact-hero-heading {
+    font-size: 1.9rem;
+  }
+}
+
+/* =====================================
+   OVERFLOW PROTECTION
+===================================== */
+@media (max-width: 768px) {
+  body,
+  .contact {
+    overflow-x: hidden;
+  }
+}

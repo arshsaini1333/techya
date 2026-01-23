@@ -468,7 +468,7 @@
   @media (max-width: 768px) {
     .portfolio-cta-container {
       flex-direction: column;
-      align-items: flex-start;
+      align-items: flex-center;
     }
   
     .portfolio-cta-btn {
@@ -476,3 +476,180 @@
     }
   }
   
+
+
+ 
+/* =========================================
+   HERO SECTION
+========================================= */
+@media (max-width: 1024px) {
+  .portfolio-hero-heading {
+    font-size: 2.6rem;
+  }
+
+  .portfolio-hero-subheading {
+    width: 95%;
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 640px) {
+  .portfolio-hero {
+    min-height: auto;
+    padding: 90px 6%;
+  }
+
+  .portfolio-hero-heading {
+    font-size: 2.1rem;
+  }
+
+  .portfolio-hero-subheading {
+    font-size: 15px;
+  }
+
+  .portfolio-hero-actions {
+    gap: 12px;
+  }
+}
+
+/* =========================================
+   PRODUCTS HEADER
+========================================= */
+@media (max-width: 768px) {
+  .portfolio-products-heading {
+    font-size: 2.2rem;
+  }
+
+  .portfolio-products-subheading {
+    font-size: 15px;
+  }
+}
+
+/* =========================================
+   PROJECT GRID
+========================================= */
+@media (max-width: 1200px) {
+  .portfolio-project-card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-projects-container {
+    gap: 30px;
+  }
+
+  .portfolio-project-card {
+    width: 100%;
+    max-width: 420px;
+  }
+
+  .portfolio-project-image {
+    height: 210px;
+  }
+
+  .portfolio-project-name-badge {
+    font-size: 1.1rem;
+    padding: 8px 16px;
+  }
+}
+
+/* =========================================
+   PROJECT OVERLAY MOBILE UX
+========================================= */
+@media (max-width: 768px) {
+  .portfolio-project-overlay {
+    padding: 20px;
+  }
+
+  .portfolio-project-overlay p {
+    font-size: 14px;
+  }
+
+  .portfolio-project-btn {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
+
+/* =========================================
+   REVIEWS SECTION
+========================================= */
+@media (max-width: 1024px) {
+  .portfolio-reviews-heading {
+    font-size: 2.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-reviews-heading {
+    font-size: 2.2rem;
+  }
+
+  .portfolio-reviews-subheading {
+    font-size: 15px;
+    padding: 0 16px;
+  }
+
+  .portfolio-review-card {
+    width: 18rem;
+  }
+
+  .portfolio-scroll-left .portfolio-reviews-track,
+  .portfolio-scroll-right .portfolio-reviews-track {
+    animation-duration: 22s;
+  }
+}
+
+/* =========================================
+   CTA SECTION
+========================================= */
+@media (max-width: 1024px) {
+  .portfolio-cta-heading {
+    font-size: 3.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-cta-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 32px;
+  }
+
+  .portfolio-cta-heading {
+    font-size: 2.4rem;
+  }
+
+  .portfolio-cta-subheading {
+    font-size: 15px;
+  }
+
+  .portfolio-cta-btn {
+    font-size: 1.05rem;
+    padding: 12px 26px;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE SAFETY
+========================================= */
+@media (max-width: 420px) {
+  .portfolio-review-card {
+    width: 16rem;
+  }
+
+  .portfolio-project-name-badge {
+    font-size: 1rem;
+  }
+}
+
+/* =========================================
+   OVERFLOW PROTECTION
+========================================= */
+@media (max-width: 768px) {
+  body,
+  .portfolio {
+    overflow-x: hidden;
+  }
+}

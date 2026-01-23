@@ -52,12 +52,7 @@ closeBtn.addEventListener("click", () => {
   document.body.style.overflow = "";
 });
 
-drawer.querySelectorAll("a").forEach(link => {
-  link.addEventListener("click", () => {
-    drawer.classList.remove("active");
-    document.body.style.overflow = "";
-  });
-});
+
 
 
 accordion.addEventListener("click", () => {
@@ -71,8 +66,8 @@ accordion.addEventListener("click", () => {
 });
 
 
-document.querySelectorAll(".tv-drawer-links a").forEach(link => {
-  link.addEventListener("click", () => {
-    drawer.classList.remove("active");
-  });
-});
+// document.querySelectorAll(".tv-drawer-links a").forEach(link => {
+//   link.addEventListener("click", () => {
+//     drawer.classList.remove("active");
+//   });
+// });

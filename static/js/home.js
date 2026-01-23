@@ -73,7 +73,7 @@ function showItem(index) {
     }
   });
 }
-
+showItem(current);
 function nextItem() {
   const currentItem = items[current];
   currentItem.classList.remove("show");
@@ -87,7 +87,7 @@ function nextItem() {
 }
 
 /* Initial */
-showItem(current);
+
 
 /* Rotate */
 setInterval(nextItem, 3000);

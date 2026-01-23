@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/portfolio.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/SubServices.css') }}">
 
 
     <link
@@ -36,6 +37,46 @@
 
     
 
+
+    <!-- Global Contact Modal -->
+        <!-- Global Contact Modal -->
+<div id="contactModal" class="modal-overlay">
+  <div class="modal-box contact-modal split-modal">
+
+    <!-- Close Button -->
+    <button class="modal-close" aria-label="Close">&times;</button>
+
+    <!-- Left Content -->
+    <div class="modal-left white-left">
+      <img src="/static/media/logo.png" alt="Techya Verse Logo" class="modal-logo" />
+
+      <h2>Grow Your Business With Advance Technologies</h2>
+      <p>
+        Tell us about your idea and our experts will help you turn it into a
+        scalable, reliable product. Fill the form and our team will connect you soon
+      </p>
+    </div>
+
+    <!-- Right Form -->
+    <div class="modal-right">
+      <form method="post" class="contact-form" id="popupForm">
+        
+
+        <input type="text" name="name" placeholder="Your Name" id="name" required />
+        <input type="email" name="email" id="email" placeholder="Your Email" required />
+        <input type="tel" name="phone" id="phone" placeholder="Phone Number" required />
+        <textarea name="msg" id="msg" placeholder="Tell us about your project" required></textarea>
+
+        <button type="submit" class="contact-submit">
+          Get a Free Consultation
+        </button>
+      </form>
+    </div>
+
+  </div>
+</div>
+
+
     {% block content %}{% endblock %}
     {% include 'base/footer.html' %}
   
@@ -47,6 +88,8 @@
     {% block page_js %}{% endblock %}
     <script src="{{ url_for('static', filename='js/home.js') }}"></script>
     <script src="{{ url_for('static', filename='js/about.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/base.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/contact.js') }}"></script>
 
 </body>
 </html>

@@ -1,8 +1,168 @@
-.coming-soon{
-    width: 100%;
-    color: #ff4305;
-    font-size: 4rem;
-    font-weight: bold;
+/* Coming Soon */
+.coming-soon {
+  width: 100%;
+  color: #ff4305;
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 15% 0;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modal-overlay.active {
+  display: flex;
+}
+
+/* Modal Box */
+.modal-box {
+  background: #fff;
+  width: 60%;
+  
+  padding: 1rem;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Close Button */
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: #ff4305;
+  z-index: 10;
+  background-color: #fff7f3;
+  border-radius: 50%;
+  height: 2rem;
+  width: 2rem;
+}
+
+/* Split Layout */
+.split-modal {
+  display: flex;
+}
+
+/* Left Section (Branding – White) */
+.modal-left {
+  flex: 1;
+  padding: 36px 30px;
+  background: #fff;
+  border-right: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.modal-logo {
+  width: 70%;
+  margin-bottom: 2rem;
+ 
+}
+
+.modal-left h2 {
+  font-size: 2rem;
+  margin-bottom: 12px;
+  color: #ff4305;
+  padding-left: 1rem;
+}
+
+.modal-left p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #111;
+  padding-left: 1rem;
+}
+
+/* Right Section (Form) */
+.modal-right {
+  flex: 1;
+  padding: 34px 30px;
+  background: #fff;
+}
+
+/* Form Fields */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 14px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #ff4305;
+}
+
+.contact-form textarea {
+  resize: none;
+  min-height: 110px;
+}
+
+/* Submit Button */
+.contact-submit {
+  width: 100%;
+  padding: 12px;
+  background: #ff4305;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.contact-submit:hover {
+  background: #e63b04;
+  transform: translateY(-1px);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .split-modal {
+    flex-direction: column;
+  }
+
+  .modal-left {
+    border-right: none;
+    border-bottom: 1px solid #eee;
     text-align: center;
-    padding: 15% 0;
+    padding: 28px 0;
+  }
+  .modal-left h2{
+    font-size: 1.2rem;
+  }
+  .modal-logo {
+    margin: 0 auto 16px;
+  }
+  textarea{
+    height: 1rem;
+  }
+  .modal-left p{
+    /* display: none; */
+    font-size: 0.9rem;
+  }
+  .modal-right{
+    padding: 0;
+  }
+  .modal-box{
+    width: 90%;
+  }
 }

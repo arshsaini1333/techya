@@ -1,0 +1,564 @@
+.sub-services{
+    width: 100%;
+}
+
+.sub-service-banner {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    background: url("/static/media/sub-service-banner.jpg") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .sub-service-banner-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+  }
+  
+  .sub-service-banner-content {
+    position: relative;
+    width: 80%;
+    padding: 0 20px;
+  }
+  
+  .sub-service-banner-heading {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 10px;
+  }
+  
+  .sub-service-banner-subheading {
+    font-size: 1.3rem;
+    line-height: 1.7;
+    color: #ffffff;
+    margin-bottom: 32px;
+  }
+  
+  .sub-service-banner-cta {
+    display: inline-block;
+    padding: 14px 32px;
+    background-color: #ff4305;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .sub-service-banner-cta:hover {
+    background-color: #e63b04;
+    transform: translateY(-2px);
+  }
+  
+
+  /* What We Do */
+  .sub-service-what-we-do {
+    padding: 5rem 1rem;
+    
+  }
+  
+  .sub-service-what-we-do-header {
+    width: 90%;
+    margin: 0 auto 60px;
+    text-align: center;
+  }
+  
+  .sub-service-what-we-do-heading {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 14px;
+    color: #ff4305;
+  }
+  
+  .sub-service-what-we-do-subheading {
+    font-size: 1.3rem;
+    line-height: 1.7;
+    color: #111;
+  }
+  
+  .sub-service-what-we-do-body {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+  }
+  
+  .sub-service-what-we-do-content {
+    flex: 1;
+  }
+  
+  .sub-service-what-we-do-text {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 24px;
+  }
+  
+  .sub-service-what-we-do-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 32px;
+  }
+  
+  .sub-service-what-we-do-list li {
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 14px;
+    font-size: 17px;
+    color: #333333;
+  }
+  
+  .sub-service-what-we-do-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #ff4305;
+    font-weight: 700;
+  }
+  
+  .sub-service-what-we-do-cta {
+    display: inline-block;
+    padding: 14px 30px;
+    background-color: #ff4305;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .sub-service-what-we-do-cta:hover {
+    background-color: #e63b04;
+    transform: translateY(-2px);
+  }
+  
+  .sub-service-what-we-do-image {
+    flex: 1;
+  }
+  
+  .sub-service-what-we-do-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  /* Responsive */
+  @media (max-width: 900px) {
+    .sub-service-what-we-do-body {
+      flex-direction: column;
+      gap: 40px;
+    }
+  
+    .sub-service-what-we-do-header {
+      margin-bottom: 40px;
+    }
+  }
+  
+
+
+  /* How We Approach the project  */
+  .sub-service-process {
+    padding: 2rem 1rem;
+    background-color: #FFF7F3;
+  }
+  
+  .sub-service-process-header {
+    widows: 90%;
+    margin: 0 auto 70px;
+    text-align: center;
+  }
+  
+  .sub-service-process-heading {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 14px;
+    color: #ff4305;
+  }
+  
+  .sub-service-process-subheading {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #111;
+  }
+  
+  /* Steps Grid */
+  .sub-service-process-steps {
+    width: 95%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+  
+  /* Card */
+  .sub-service-process-card {
+    background-color: #ffffff;
+    padding: 2rem 1.3rem;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .sub-service-process-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+  }
+  
+  .sub-service-process-icon {
+    width: 40px;
+    height: 40px;
+    color: #ff4305;
+    margin-bottom: 20px;
+  }
+  
+  .sub-service-process-card-heading {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #111111;
+  }
+  
+  .sub-service-process-card-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #555555;
+  }
+  
+  /* CTA */
+  .sub-service-process-cta-wrapper {
+    margin-top: 60px;
+    text-align: center;
+  }
+  
+  .sub-service-process-cta {
+    display: inline-block;
+    padding: 14px 34px;
+    background-color: #ff4305;
+    color: #ffffff;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .sub-service-process-cta:hover {
+    background-color: #e63b04;
+    transform: translateY(-2px);
+  }
+  
+  /* Responsive */
+  @media (max-width: 1000px) {
+    .sub-service-process-steps {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .sub-service-process-steps {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+
+
+  /* TEchnologies WE Used To Build  */
+  .sub-service-tech {
+    padding: 5rem 1rem;
+    background-color: #ffffff;
+  }
+  
+  .sub-service-tech-header {
+    max-width: 800px;
+    margin: 0 auto 50px;
+    text-align: center;
+  }
+  
+  .sub-service-tech-heading {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 14px;
+    color: #ff4305;
+  }
+  
+  .sub-service-tech-subheading {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #111;
+  }
+  
+  /* Slider */
+  .sub-service-tech-slider {
+    overflow: hidden;
+    max-width: 100%;
+  }
+  
+  .sub-service-tech-track {
+    display: flex;
+    gap: 24px;
+    animation: sub-service-tech-scroll 25s linear infinite;
+    padding: 1rem 0;
+    width: max-content;
+  }
+  
+  /* Card */
+  .sub-service-tech-card {
+    min-width: 120px;
+    height: 120px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px;
+    transition: transform 0.3s ease;
+  }
+  
+  .sub-service-tech-card:hover {
+    transform: translateY(-6px);
+  }
+  
+  .sub-service-tech-card img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+  }
+  
+  .sub-service-tech-card span {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #333333;
+    text-align: center;
+  }
+  
+  /* Animation */
+  @keyframes sub-service-tech-scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  
+  /* Pause on hover */
+  .sub-service-tech-slider:hover .sub-service-tech-track {
+    animation-play-state: paused;
+  }
+  
+
+  /* CTA  */
+  .sub-service-final-cta {
+    padding: 5rem 1rem;
+    padding-top: 2rem;
+    padding-bottom: 6rem;
+  }
+  
+  .sub-service-final-cta-inner {
+    max-width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    
+  }
+  
+  .sub-service-final-cta-heading {
+    font-size: 3rem;
+    color: #ff4305;
+    margin-bottom: 12px;
+    width: 95%;
+  }
+  
+  .sub-service-final-cta-subheading {
+    font-size: 1.5rem;
+    line-height: 1.7;
+    color: #333;
+    font-weight: 600 !important;
+    width: 90%;
+  }
+  
+  .sub-service-final-cta-btn {
+    display: inline-block;
+    padding: 16px 38px;
+    background-color: #ff4305;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 4px;
+    white-space: nowrap;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .sub-service-final-cta-btn:hover {
+    background-color: #e63b04;
+    transform: translateY(-2px);
+  }
+  
+  /* Responsive */
+  @media (max-width: 900px) {
+    .sub-service-final-cta-inner {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .sub-service-final-cta-subheading {
+      max-width: 100%;
+    }
+  }
+  
+
+  /* =========================
+   GLOBAL RESPONSIVE FIXES
+   ========================= */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .sub-service-banner {
+    height: 60vh;
+  }
+
+  .sub-service-banner-heading {
+    font-size: 2.8rem;
+  }
+
+  .sub-service-banner-subheading {
+    font-size: 1.15rem;
+  }
+
+  .sub-service-what-we-do-heading,
+  .sub-service-process-heading,
+  .sub-service-tech-heading,
+  .sub-service-final-cta-heading {
+    font-size: 2.5rem;
+  }
+
+  .sub-service-what-we-do-subheading,
+  .sub-service-process-subheading,
+  .sub-service-tech-subheading {
+    font-size: 1.15rem;
+  }
+
+  .sub-service-final-cta-subheading {
+    font-size: 1.3rem;
+  }
+}
+
+
+/* Mobile */
+@media (max-width: 768px) {
+  /* Banner */
+  .sub-service-banner {
+    height: auto;
+    padding: 6rem 1rem;
+  }
+
+  .sub-service-banner-content {
+    width: 100%;
+  }
+
+  .sub-service-banner-heading {
+    font-size: 2.2rem;
+  }
+
+  .sub-service-banner-subheading {
+    font-size: 1.05rem;
+  }
+
+  /* Section Headings */
+  .sub-service-what-we-do-heading,
+  .sub-service-process-heading,
+  .sub-service-tech-heading,
+  .sub-service-final-cta-heading {
+    font-size: 2.1rem;
+  }
+
+  .sub-service-what-we-do-subheading,
+  .sub-service-process-subheading,
+  .sub-service-tech-subheading {
+    font-size: 1.05rem;
+  }
+
+  /* Text */
+  .sub-service-what-we-do-text,
+  .sub-service-what-we-do-list li {
+    font-size: 16px;
+  }
+
+  /* What We Do layout */
+  .sub-service-what-we-do-body {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  /* Process cards */
+  .sub-service-process-steps {
+    grid-template-columns: 1fr;
+  }
+
+  /* Tech slider cards */
+  .sub-service-tech-card {
+    min-width: 105px;
+    height: 105px;
+  }
+
+  .sub-service-tech-card img {
+    width: 42px;
+    height: 42px;
+  }
+
+  /* Final CTA */
+  .sub-service-final-cta-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .sub-service-final-cta-heading {
+    width: 100%;
+  }
+
+  .sub-service-final-cta-subheading {
+    font-size: 1.15rem;
+    width: 100%;
+  }
+}
+
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .sub-service-banner-heading {
+    font-size: 1.9rem;
+  }
+
+  .sub-service-banner-subheading {
+    font-size: 0.95rem;
+  }
+
+  .sub-service-what-we-do-heading,
+  .sub-service-process-heading,
+  .sub-service-tech-heading,
+  .sub-service-final-cta-heading {
+    font-size: 1.8rem;
+  }
+
+  .sub-service-final-cta-btn,
+  .sub-service-banner-cta,
+  .sub-service-what-we-do-cta,
+  .sub-service-process-cta {
+    padding: 12px 26px;
+    font-size: 0.95rem;
+  }
+}

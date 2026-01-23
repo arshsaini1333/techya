@@ -207,7 +207,7 @@ const techIcons = {
   CCXT: ICON_BASE + "ccxt.png",
   Python: ICON_BASE + "icons8-python-96.png",
   "Candlestick Patterns": ICON_BASE + "candlestick.png",
-  "Technical Indicators": ICON_BASE + "technicalindicator.png",
+  "Technical Indicators": ICON_BASE + "technicalndicator.png",
   "Risk Management": ICON_BASE + "icons8-risk-management-96.png",
   "Market Making": ICON_BASE + "marketmaking.png",
   "Order Management": ICON_BASE + "icons8-order-management-96.png",

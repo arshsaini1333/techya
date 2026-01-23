@@ -9,7 +9,8 @@
 {% block content %}
 <!-- Hero Section -->
 
-<section class="hero hero-top" id="home">
+<div class="HomeHero">
+  <section class="hero hero-top" id="home">
     <div id="three-canvas"></div>
     <canvas class="neural-network" id="neural-network"></canvas>
   
@@ -47,8 +48,8 @@
           
             <!-- CTA Buttons -->
             <div class="hero-cta">
-              <a href="#" class="btn-primary">Build With Techya Verse</a>
-              <a href="#" class="btn-secondary">Explore Our Services</a>
+              <a href="#" class="btn-primary open-contact">Build With Techya Verse</a>
+              <a href="/services" class="btn-secondary">Explore Our Services</a>
             </div>
           </div>
           
@@ -94,7 +95,7 @@
           We solve real, high-impact business problems using AI,
           automation, and intelligent systems.
         </p>
-        <button class="problem-cta">Book A Call With Our Expert</button/>
+        <button class="problem-cta open-contact">Book A Call With Our Expert</button/>
       </div>
   
       <!-- RIGHT SCROLLING CARDS -->
@@ -383,7 +384,7 @@
           <div class="card-content">
             <h3>Web Development</h3>
             <p>Scalable, secure, and performance-focused web platforms built end to end.</p>
-            <a href="#">Read More →</a>
+            <a href="/services/web-development">Read More →</a>
           </div>
         </div>
       
@@ -398,7 +399,7 @@
           <div class="card-content">
             <h3>Generative AI</h3>
             <p>LLM-powered systems for content generation, chatbots, and automation.</p>
-            <a href="#">Read More →</a>
+            <a href="/services/generative-ai">Read More →</a>
           </div>
         </div>
       
@@ -413,7 +414,7 @@
           <div class="card-content">
             <h3>Agentic AI</h3>
             <p>Autonomous AI agents that reason, plan, and act across workflows.</p>
-            <a href="#">Read More →</a>
+            <a href="/services/agentic-ai">Read More →</a>
           </div>
         </div>
       
@@ -428,7 +429,7 @@
           <div class="card-content">
             <h3>AI Workflow</h3>
             <p>Custom AI pipelines integrated with business processes.</p>
-            <a href="#">Read More →</a>
+            <a href="/services/ai-workflows">Read More →</a>
           </div>
         </div>
       
@@ -443,7 +444,7 @@
           <div class="card-content">
             <h3>Algo Trading</h3>
             <p>Data-driven trading strategies with automation and risk control.</p>
-            <a href="#">Read More →</a>
+            <a href="/services/algo-trading">Read More →</a>
           </div>
         </div>
       
@@ -458,7 +459,7 @@
           <div class="card-content">
             <h3>Machine Learning</h3>
             <p>Predictive models trained for real-world performance.</p>
-            <a href="#">Read More →</a>
+            <a href="/services/machine-learning">Read More →</a>
           </div>
         </div>
       
@@ -473,7 +474,7 @@
           <div class="card-content">
             <h3>Blockchain</h3>
             <p>Decentralized applications and smart contract development.</p>
-            <a href="#">Read More →</a>
+            <a href="/services/blockchain">Read More →</a>
           </div>
         </div>
       
@@ -488,7 +489,7 @@
           <div class="card-content">
             <h3>Web Scraping</h3>
             <p>High-accuracy data extraction at scale.</p>
-            <a href="#">Read More →</a>
+            <a href="/services/web-scraping">Read More →</a>
           </div>
         </div>
       
@@ -503,7 +504,7 @@
           <div class="card-content">
             <h3>Computer Vision</h3>
             <p>Image and video intelligence for detection, tracking, and analysis.</p>
-            <a href="#">Read More →</a>
+            <a href="/services/computer-vision">Read More →</a>
           </div>
         </div>
       
@@ -526,7 +527,7 @@
         <p class="tv-subtitle">
           Trusted by founders, product teams, and enterprises building real-world AI systems.  Honest feedback from teams who’ve scaled production systems with us.
         </p>   
-        <a href="#" class="tv-btn">Talk to Our Team</a>
+        <a href=""  class="tv-btn open-contact">Talk to Our Team</a>
       </div>
   
       <!-- RIGHT SCROLLING TESTIMONIALS -->
@@ -795,6 +796,8 @@
     </div>
   </section>
   
+  {% include 'base/footer.html' %}
+</div>
   
 
   <!--Chatbot-->

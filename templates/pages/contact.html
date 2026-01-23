@@ -25,7 +25,7 @@
       </section>
       
       <!--Contact SEction-->
-      <section class="portfolio-contact-section">
+      <section class="portfolio-contact-section" id="contact-form">
         <div class="portfolio-contact-container">
       
           <!-- LEFT CONTENT -->
@@ -44,19 +44,21 @@
       
           <!-- RIGHT FORM -->
           <div class="portfolio-contact-right">
-            <form class="portfolio-contact-form">
+            <form method="post" class="portfolio-contact-form" id="contactForm">
       
               <div class="portfolio-form-row">
                 <input
                   type="text"
                   placeholder="Full Name"
                   class="portfolio-form-input"
+                  name="name"
                   required
                 />
                 <input
                   type="email"
                   placeholder="Email Address"
                   class="portfolio-form-input"
+                  name="email"
                   required
                 />
               </div>
@@ -65,12 +67,14 @@
                 type="tel"
                 placeholder="Phone Number"
                 class="portfolio-form-input portfolio-form-full"
+                name="phone"
               />
       
               <textarea
                 rows="5"
                 placeholder="Write Message"
                 class="portfolio-form-textarea"
+                name="msg"
                 required
               ></textarea>
       

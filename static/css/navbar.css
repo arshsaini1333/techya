@@ -198,7 +198,6 @@
     right: -100%;
     width: 300px;
     height: 100%;
-  
     background: #fff;
     box-shadow: -20px 0 50px rgba(0, 0, 0, 0.15);
     transition: right 0.4s ease;
@@ -214,6 +213,10 @@
      RESPONSIVE
   ================================ */
   @media (max-width: 900px) {
+    .tv-navbar{
+      width: 95%;
+      margin: auto;
+    }
     .tv-nav-container {
       width: 92%;
     }
@@ -280,10 +283,11 @@
   padding: 20px;
   display: flex;
   flex-direction: column;
+  height: 1000vh;
+
 }
 
-.tv-drawer-links a,
-.tv-accordion {
+.tv-drawer-links a {
   padding: 14px 0;
   font-size: 16px;
   color: #020617;
@@ -301,7 +305,7 @@
 /* ===============================
    ACCORDION
 ================================ */
-.tv-accordion i {
+.tv-accordion  {
   transition: transform 0.3s ease;
 }
 
@@ -315,13 +319,14 @@
   transition: max-height 0.35s ease;
   padding-left: 10px;
 }
-
-.tv-accordion-panel a {
-  font-size: 15px;
-  padding: 12px 0;
-  color: #475569;
+.accordion-panel{
+  padding-left: 2.5rem;
 }
 
+.accordion-panel a{
+  font-size: 0.9rem;
+  padding: 0.3rem;
+}
 /* ===============================
    MOBILE CTA
 ================================ */

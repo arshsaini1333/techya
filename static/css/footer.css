@@ -3,6 +3,8 @@
     color: #e5e7eb;
     padding-top: 80px;
     font-family: inherit;
+    position: static;
+    bottom: 0;
   }
   
   .tv-footer-container {
